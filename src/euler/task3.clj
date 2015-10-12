@@ -6,7 +6,8 @@
 
 (defn max-prime-factor
   "Given N, returns largest prime factor of N"
-  [n] (last (prime-factors-seq n)))
+  [n]
+  (last (prime-factors-seq n)))
 
 (deftest test1 (is (= (max-prime-factor 13195) 29)))
 

@@ -7,7 +7,8 @@
 (defn even-fib-sum
   "Given N, returns the sum of all even-valued fibonnaci numbers, whose values are less
   than N"
-  [n] (reduce + (filter even? (take-while #(< % n) (fib-seq)))))
+  [n]
+  (reduce + (filter even? (take-while #(< % n) (fib-seq)))))
 
 (deftest test1 (is (= (even-fib-sum 100) 44)))
 
