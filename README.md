@@ -25,5 +25,8 @@ Solutions to problems from http://projecteuler.net
   * [9](https://projecteuler.net/problem=9)
 * Combinatorics
   * [15](https://projecteuler.net/problem=15)
+* Dynamic programming
+  * [18](https://projecteuler.net/problem=18),
+    [67](https://projecteuler.net/problem=67)
 * Data manipulation
   * [11](https://projecteuler.net/problem=11)
