@@ -15,3 +15,7 @@
   "Given N, coll, returns true, if N is the multiple of every element of coll, and false
   otherwise"
   [n coll] (every? #(divides? n %) coll))
+
+(defn sqr
+  "Given N, returns N^2"
+  [n] (* n n))

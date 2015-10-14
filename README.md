@@ -4,7 +4,8 @@ Solutions to problems from http://projecteuler.net
 
 * Elementary
   * [1](https://projecteuler.net/problem=1),
-    [4](https://projecteuler.net/problem=4)
+    [4](https://projecteuler.net/problem=4),
+    [6](https://projecteuler.net/problem=6)
 * Fibonnaci numbers
   * [2](https://projecteuler.net/problem=2)
 * Prime numbers

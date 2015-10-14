@@ -10,7 +10,7 @@
   [n]
   (let [less-n (fn [coll] (take-while #(<= % n) coll))
         pow-iter (fn [n] (iterate #(* % n) n))
-        prime-factors (less-n (primes-seq))
+        prime-factors (less-n (prime-seq))
         prime-powers (map #(last (less-n (pow-iter %))) prime-factors)]
     (reduce *' prime-powers)))
 

@@ -7,7 +7,7 @@
   [] (let [next-fib (fn [[prev cur]] [cur (+ prev cur)])]
        (map first (iterate next-fib [1 1]))))
 
-(defn primes-seq
+(defn prime-seq
   "Returns lazy sequence of prime numbers"
   []
   (let [upd (fn [sieve n prime] (update-in sieve [(+ n prime)] conj prime))
@@ -19,7 +19,7 @@
                                                    (list prime)) (inc prime))))))]
     (prime-step {} 2)))
 
-(def prime-seq$ (primes-seq))
+(def prime-seq$ (prime-seq))
 
 (defn min-prime-factor
   "Given N and M, returns minimal prime factor of N, greater or equal than M"
