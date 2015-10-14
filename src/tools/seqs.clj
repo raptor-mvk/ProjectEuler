@@ -58,3 +58,13 @@
                                  (pyth-trip-step m (+ n 2))))
                              (pyth-trip-step m (+ n 2)))))]
     (pyth-trip-step 2 1)))
+
+(defn collatz-seq
+  "Given N, returns next Collatz sequence, starting from N"
+  [n]
+  (let [collatz-step (fn colltz-step [n]
+                       (cond
+                         (= n 1) 0
+                         (odd? n) (inc (*' n 3))
+                         :else (quot n 2)))]
+    (take-while #(> % 0) (iterate collatz-step n))))

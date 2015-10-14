@@ -10,6 +10,8 @@ Solutions to problems from http://projecteuler.net
     [13](https://projecteuler.net/problem=13)
 * Fibonnaci numbers
   * [2](https://projecteuler.net/problem=2)
+* Collatz numbers
+  * [14](https://projecteuler.net/problem=14)
 * Prime numbers
   * [3](https://projecteuler.net/problem=3),
     [5](https://projecteuler.net/problem=5),
