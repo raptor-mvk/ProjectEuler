@@ -4,9 +4,7 @@
 (ns
   ^{:author raptor_MVK}
   euler.volume_1.task18
-  (:use clojure.test)
-  (:use tools.math)
-  (:use tools.conversions))
+  (:use clojure.test))
 
 (defn max-sum-way
   "Given a triangle, returns the sum of the maximum path through a triangle, that
