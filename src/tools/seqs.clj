@@ -1,6 +1,7 @@
 (ns
   ^{:author raptor_MVK}
-  tools.seqs)
+  tools.seqs
+  (:use tools.math))
 
 (defn fib-seq
   "Returns lazy sequence of Fibonnaci numbers"
@@ -43,3 +44,17 @@
   "Given sequence and N, returns all subsequences of length N"
   [coll n]
   (partition n (apply interleave (take n (iterate rest coll)))))
+
+(defn prim-pyth-trip-seq
+  "Returns lazy sequence of pythagorean triplets"
+  []
+  (let [pyth-trip-step (fn pyth-trip-step [m n]
+                         (if (<= m n)
+                           (pyth-trip-step (inc m) (if (odd? m) 1 2))
+                           (if (= 1 (gcd m n))
+                             (let [m2 (sqr m)
+                                   n2 (sqr n)]
+                               (lazy-cat [[(- m2 n2) (* 2 m n) (+ m2 n2)]]
+                                 (pyth-trip-step m (+ n 2))))
+                             (pyth-trip-step m (+ n 2)))))]
+    (pyth-trip-step 2 1)))

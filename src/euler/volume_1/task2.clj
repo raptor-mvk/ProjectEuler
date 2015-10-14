@@ -1,3 +1,5 @@
+; Topic: Fibonnaci numbers
+
 (ns
   ^{:author raptor_MVK}
   euler.volume_1.task2

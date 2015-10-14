@@ -13,3 +13,5 @@ Solutions to problems from http://projecteuler.net
   * [3](https://projecteuler.net/problem=3),
     [5](https://projecteuler.net/problem=5),
     [7](https://projecteuler.net/problem=7)
+* Pythagorean triplets
+  * [9](https://projecteuler.net/problem=9)
