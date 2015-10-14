@@ -33,3 +33,11 @@
   representation"
   [s]
   (map #(- (int %) (int \0)) s))
+
+(defn seq2num
+  "Given a digit sequence and base K, returns number, represented by sequence;
+  given a digit sequence, returns seq2num(c,10)"
+  ([c]
+    (seq2num c 10))
+  ([c k]
+    (reduce #(+ (* k %1) %2) 0 c)))
