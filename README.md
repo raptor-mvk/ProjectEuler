@@ -12,6 +12,7 @@ Solutions to problems from http://projecteuler.net
 * Prime numbers
   * [3](https://projecteuler.net/problem=3),
     [5](https://projecteuler.net/problem=5),
-    [7](https://projecteuler.net/problem=7)
+    [7](https://projecteuler.net/problem=7),
+    [10](https://projecteuler.net/problem=10)
 * Pythagorean triplets
   * [9](https://projecteuler.net/problem=9)
