@@ -16,3 +16,5 @@ Solutions to problems from http://projecteuler.net
     [10](https://projecteuler.net/problem=10)
 * Pythagorean triplets
   * [9](https://projecteuler.net/problem=9)
+* Data manipulation
+  * [11](https://projecteuler.net/problem=11)
