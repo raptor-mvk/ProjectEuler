@@ -14,6 +14,8 @@ Solutions to problems from http://projecteuler.net
     [5](https://projecteuler.net/problem=5),
     [7](https://projecteuler.net/problem=7),
     [10](https://projecteuler.net/problem=10)
+* Figurate numbers
+  * [12](https://projecteuler.net/problem=12)
 * Pythagorean triplets
   * [9](https://projecteuler.net/problem=9)
 * Data manipulation
