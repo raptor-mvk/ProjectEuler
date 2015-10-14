@@ -23,16 +23,23 @@
 
 (defn min-prime-factor
   "Given N and M, returns minimal prime factor of N, greater or equal than M"
-  [n m] (first (drop-while #(or (< % m) (> (rem n %) 0)) prime-seq$)))
+  [n m]
+  (first (drop-while #(or (< % m) (> (rem n %) 0)) prime-seq$)))
 
 (defn prime-factors-seq
   "Given N, returns its prime factors"
-  [n] (let [prime-factors (fn prime-factors [n factors m]
-                            (let [next-prime-factor (min-prime-factor n m)]
-                              (if (= next-prime-factor n)
-                                (conj factors n)
-                                (prime-factors (quot n next-prime-factor)
-                                  (conj factors next-prime-factor) next-prime-factor))))]
-        (if (< n 2)
-          nil
-          (prime-factors n [] 2))))
+  [n]
+  (let [prime-factors (fn prime-factors [n factors m]
+                        (let [next-prime-factor (min-prime-factor n m)]
+                          (if (= next-prime-factor n)
+                            (conj factors n)
+                            (prime-factors (quot n next-prime-factor)
+                              (conj factors next-prime-factor) next-prime-factor))))]
+    (if (< n 2)
+      nil
+      (prime-factors n [] 2))))
+
+(defn n-subseqs
+  "Given sequence and N, returns all subsequences of length N"
+  [coll n]
+  (partition n (apply interleave (take n (iterate rest coll)))))

@@ -1,6 +1,6 @@
 (ns
   ^{:author raptor_MVK}
-  euler.task1
+  euler.volume_1.task1
   (:use clojure.test)
   (:use tools.math))
 
@@ -13,4 +13,4 @@
 
 (deftest test2 (is (= (sum-mul 1000 [3 5]) 233168)))
 
-(time (run-tests 'euler.task1))
+(time (run-tests 'euler.volume_1.task1))

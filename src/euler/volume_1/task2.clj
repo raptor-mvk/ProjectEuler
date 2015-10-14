@@ -1,6 +1,6 @@
 (ns
   ^{:author raptor_MVK}
-  euler.task2
+  euler.volume_1.task2
   (:use clojure.test)
   (:use tools.seqs))
 
@@ -14,4 +14,4 @@
 
 (deftest test2 (is (= (even-fib-sum 4000000) 4613732)))
 
-(time (run-tests 'euler.task2))
+(time (run-tests 'euler.volume_1.task2))

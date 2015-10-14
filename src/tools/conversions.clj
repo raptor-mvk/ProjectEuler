@@ -24,5 +24,12 @@
 
 (defn is-palindrome?
   "Given N, returns true if it is a palindrome"
-  [n] (let [seq-n (num2seq n)]
-        (= seq-n (reverse seq-n))))
+  [n]
+  (let [seq-n (num2seq n)]
+    (= seq-n (reverse seq-n))))
+
+(defn numstr2seq
+  "Given a string representation of decimal number, returns its sequential digit
+  representation"
+  [s]
+  (map #(- (int %) (int \0)) s))

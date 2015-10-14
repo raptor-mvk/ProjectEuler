@@ -1,6 +1,6 @@
 (ns
   ^{:author raptor_MVK}
-  euler.task3
+  euler.volume_1.task3
   (:use clojure.test)
   (:use tools.seqs))
 
@@ -13,4 +13,4 @@
 
 (deftest test2 (is (= (max-prime-factor 600851475143) 6857)))
 
-(time (run-tests 'euler.task3))
+(time (run-tests 'euler.volume_1.task3))

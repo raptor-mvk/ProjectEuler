@@ -1,6 +1,6 @@
 (ns
   ^{:author raptor_MVK}
-  euler.task5
+  euler.volume_1.task5
   (:use clojure.test)
   (:use tools.seqs))
 
@@ -18,4 +18,4 @@
 
 (deftest test2 (is (= (min-multiple 20) 232792560)))
 
-(time (run-tests 'euler.task5))
+(time (run-tests 'euler.volume_1.task5))

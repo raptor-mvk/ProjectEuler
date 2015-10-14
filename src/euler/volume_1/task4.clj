@@ -1,6 +1,6 @@
 (ns
   ^{:author raptor_MVK}
-  euler.task4
+  euler.volume_1.task4
   (:use clojure.test)
   (:use tools.conversions))
 
@@ -17,4 +17,4 @@
 
 (deftest test2 (is (= (max-palindrome 100 1000) 906609)))
 
-(time (run-tests 'euler.task4))
+(time (run-tests 'euler.volume_1.task4))
