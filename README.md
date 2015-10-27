@@ -22,7 +22,8 @@ Solutions to problems from http://projecteuler.net
     [16](https://projecteuler.net/problem=16),
     [17](https://projecteuler.net/problem=17),
     [19](https://projecteuler.net/problem=19),
-    [20](https://projecteuler.net/problem=20)
+    [20](https://projecteuler.net/problem=20),
+    [22](https://projecteuler.net/problem=22)
 * Fibonnaci numbers
   * [2](https://projecteuler.net/problem=2)
 * Figurate numbers

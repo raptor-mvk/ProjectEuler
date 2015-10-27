@@ -4,7 +4,6 @@
   ^{:author raptor_MVK}
   euler.volume_1.task21
   (:use clojure.test)
-  (:use tools.seqs)
   (:use tools.math))
 
 (defn amicable-sum
