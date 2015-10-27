@@ -24,6 +24,11 @@
   [n]
   (* n n))
 
+(defn fact
+  "Given N, returns N!"
+  [n]
+  (if (<= n 1) 1 (*' n (fact (dec n)))))
+
 (defn gcd
   "Given M, N, returns their greater common divisor"
   [m n]
