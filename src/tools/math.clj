@@ -32,8 +32,10 @@
 (defn gcd
   "Given M, N, returns their greater common divisor"
   [m n]
+  (println m n)
   (cond
-    (= m n) m
+    (= m 0) n
+    (= n 0) m
     (< m n) (gcd (rem n m) m)
     :else (gcd (rem m n) n)))
 
@@ -42,7 +44,7 @@
   [n]
   (if (< n 2)
     []
-    (concat [1] (filter #(= 0 (rem n %)) (range 2 (quot n 2))))))
+    (concat [1] (filter #(= 0 (rem n %)) (range 2 (inc (quot n 2)))))))
 
 (defn nat-pow
   "Given X, N, returns X^N"
