@@ -3,7 +3,7 @@
 
 (ns
   ^{:author raptor_MVK}
-  euler.volume_3.task67
+  euler.volume_2.task67
   (:use clojure.test))
 
 (defn max-sum-way
@@ -270,4 +270,4 @@
 
 (deftest test2 (is (= (max-sum-way tri2) 7273)))
 
-(time (run-tests 'euler.volume_3.task67))
+(time (run-tests 'euler.volume_2.task67))

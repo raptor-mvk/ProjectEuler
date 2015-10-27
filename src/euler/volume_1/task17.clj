@@ -3,7 +3,7 @@
 (ns
   ^{:author raptor_MVK}
   euler.volume_1.task17
-  (:use clojure.test)
+  (:use clojure.test))
 
 (defn num-letters-count
   "Given N, returns number of letters in all numbers from 1 to N inclusive written in
