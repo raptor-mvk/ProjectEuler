@@ -110,3 +110,11 @@
   (first (filter (complement false?)
            (map #(and (%1 (factors-sum n) n) %2)
              [< = >] [:deficient :perfect :abundant]))))
+
+(defn prime?
+  "Given a number N, returns true, if N is prime, and false otherwise"
+  [n]
+  (if (< n 2)
+    false
+    (let [limit (int (Math/sqrt n))]
+      (every? #(> (rem n %) 0) (take-while #(< % limit) prime-seq$)))))

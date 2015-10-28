@@ -4,9 +4,7 @@
 (ns
   ^{:author raptor_MVK}
   euler.volume_1.task26
-  (:use clojure.test)
-  (:use tools.seqs)
-  (:use tools.math))
+  (:use clojure.test))
 
 (defn max-recur-cycle
   "Given N, returns d < N, for which 1/d contains the longest recurring cycle in its
