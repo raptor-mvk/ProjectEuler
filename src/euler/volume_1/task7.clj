@@ -4,7 +4,7 @@
   ^{:author raptor_MVK}
   euler.volume_1.task7
   (:use clojure.test)
-  (:use tools.seqs))
+  (:use tools.math))
 
 (defn nth-prime
   "Given N, returns Nth prime number"

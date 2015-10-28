@@ -4,7 +4,7 @@
   ^{:author raptor_MVK}
   euler.volume_1.task10
   (:use clojure.test)
-  (:use tools.seqs))
+  (:use tools.math))
 
 (defn prime-sum
   "Given N, returns the sum of all primes, which are less than N"

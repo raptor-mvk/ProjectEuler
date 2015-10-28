@@ -4,14 +4,14 @@
   ^{:author raptor_MVK}
   euler.volume_1.task12
   (:use clojure.test)
-  (:use tools.seqs))
+  (:use tools.math))
 
 (defn divisible-triangle-num
   "Given N, returns the value of the first triangle number to have over N divisors"
   [n]
   (let [tri-seq (map #(reduce +' (range (inc %))) (range))
         prime-factors (filter (complement empty?)
-                        (map #(vector % (frequencies (prime-factors-seq %))) tri-seq))
+                        (map #(vector % (frequencies (prime-factors %))) tri-seq))
         factors-count (fn [coll] (vector (first coll)
                                    (reduce #(*' %1 (inc (last %2))) 1 (last coll))))]
     (first (first (drop-while #(<= (last %) n) (map factors-count prime-factors))))))

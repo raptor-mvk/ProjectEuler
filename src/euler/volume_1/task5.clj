@@ -4,7 +4,7 @@
   ^{:author raptor_MVK}
   euler.volume_1.task5
   (:use clojure.test)
-  (:use tools.seqs))
+  (:use tools.math))
 
 (defn min-multiple
   "Given N, returns the smallest positive number that is evenly divisible by all of the
