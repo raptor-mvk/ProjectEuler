@@ -3,7 +3,6 @@
 (ns
   ^{:author raptor_MVK}
   euler.volume_1.task23
-  (:use clojure.set)
   (:use clojure.test)
   (:use tools.seqs))
 

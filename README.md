@@ -3,7 +3,8 @@ Solutions to problems from http://projecteuler.net
 # Topics
 
 * Combinatorics
-  * [15](https://projecteuler.net/problem=15)
+  * [15](https://projecteuler.net/problem=15),
+    [24](https://projecteuler.net/problem=24)
 * Data manipulation
   * [11](https://projecteuler.net/problem=11)
 * Dynamic programming
