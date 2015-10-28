@@ -5,7 +5,7 @@
 
 (defn fib-seq
   "Returns lazy sequence of Fibonnaci numbers"
-  [] (let [next-fib (fn [[prev cur]] [cur (+ prev cur)])]
+  [] (let [next-fib (fn [[prev cur]] [cur (+' prev cur)])]
        (map first (iterate next-fib [1 1]))))
 
 (defn n-subseqs
@@ -17,7 +17,6 @@
   "Returns lazy sequence of pythagorean triplets"
   []
   (let [pyth-trip-step (fn pyth-trip-step [m n]
-                         (println "pyth" m n)
                          (if (<= m n)
                            (pyth-trip-step (inc m) (if (odd? m) 1 2))
                            (if (= 1 (gcd m n))

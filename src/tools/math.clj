@@ -32,7 +32,6 @@
 (defn gcd
   "Given M, N, returns their greater common divisor"
   [m n]
-  (println m n)
   (cond
     (= m 0) n
     (= n 0) m

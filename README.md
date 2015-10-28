@@ -30,4 +30,6 @@ Solutions to problems from http://projecteuler.net
     [20](https://projecteuler.net/problem=20),
     [21](https://projecteuler.net/problem=21),
     [22](https://projecteuler.net/problem=22),
-    [23](https://projecteuler.net/problem=23)
+    [23](https://projecteuler.net/problem=23),
+    [25](https://projecteuler.net/problem=25),
+    [26](https://projecteuler.net/problem=26)
