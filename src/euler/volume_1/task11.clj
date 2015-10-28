@@ -1,4 +1,4 @@
-; Topic: data manipulation
+; Topic: data representation
 
 (ns
   ^{:author raptor_MVK}

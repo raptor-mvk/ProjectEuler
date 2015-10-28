@@ -6,7 +6,8 @@ Solutions to problems from http://projecteuler.net
   * [15](https://projecteuler.net/problem=15),
     [24](https://projecteuler.net/problem=24)
 * Data manipulation
-  * [11](https://projecteuler.net/problem=11)
+  * [11](https://projecteuler.net/problem=11),
+    [28](https://projecteuler.net/problem=28)
 * Dynamic programming
   * [18](https://projecteuler.net/problem=18),
     [67](https://projecteuler.net/problem=67)
