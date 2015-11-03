@@ -3,9 +3,7 @@
 (ns
   ^{:author raptor_MVK}
   euler.volume_1.task22
-  (:use clojure.test)
-  (:use tools.seqs)
-  (:use tools.math))
+  (:use clojure.test))
 
 (defn names-scores
   "Given list of strings, returns sum of alphabetical values multiplied by its position

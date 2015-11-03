@@ -5,7 +5,8 @@
   euler.volume_1.task9
   (:use clojure.test)
   (:use tools.seqs)
-  (:use tools.math))
+  (:use tools.math)
+  (:use tools.factorization))
 
 (defn pyth-triplet-1000
   "Returns product abc for single Pythagorean triplets such, that a + b + c = 1000"

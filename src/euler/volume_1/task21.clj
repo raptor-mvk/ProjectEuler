@@ -4,7 +4,7 @@
   ^{:author raptor_MVK}
   euler.volume_1.task21
   (:use clojure.test)
-  (:use tools.math))
+  (:use tools.factorization))
 
 (defn amicable-sum
   "Given N, returns sum of all the amicable numbers under N"

@@ -7,7 +7,7 @@
   ^{:author raptor_MVK}
   euler.volume_1.task27
   (:use clojure.test)
-  (:use tools.math))
+  (:use tools.factorization))
 
 (defn max-quadratic-primes
   "Given K, M, returns product of coefficients a, b of formula n ^ 2 + a * n + b, which

@@ -4,7 +4,7 @@
   ^{:author raptor_MVK}
   euler.volume_1.task19
   (:use clojure.test)
-  (:use tools.math))
+  (:use tools.date))
 
 (defn first-sunday-count
   "Returns number of Sundays fell on the first of the month during the twentieth century"

@@ -1,7 +1,36 @@
 (ns
   ^{:author raptor_MVK}
   tools.seqs
-  (:use tools.math))
+  (:use tools.math)
+  (:use tools.factorization))
+
+(declare abundants-seq collatz-seq fib-seq n-subseqs prim-pyth-trip-seq)
+
+(defn abundants-seq
+  "Given N, returns the sequence of abundant numbers below N"
+  [n]
+  (loop [nums (range 1 n)
+         res []]
+    (if (empty? nums)
+      (sort (distinct res))
+      (let [cur (first nums)
+            tail (rest nums)
+            cur-type (perfect? cur)]
+        (if (= cur-type :deficient)
+          (recur (rest nums) res)
+          (let [multiples (range (condp = cur-type :perfect 2 1) (/ n cur))
+                new-abundants (map #(* % cur) multiples)]
+            (recur (remove #(= 0 (rem % cur)) nums) (concat res new-abundants))))))))
+
+(defn collatz-seq
+  "Given N, returns next Collatz sequence, starting from N"
+  [n]
+  (let [collatz-step (fn colltz-step [n]
+                       (cond
+                         (= n 1) 0
+                         (odd? n) (inc (*' n 3))
+                         :else (quot n 2)))]
+    (take-while #(> % 0) (iterate collatz-step n))))
 
 (defn fib-seq
   "Returns lazy sequence of Fibonnaci numbers"
@@ -26,29 +55,3 @@
                                  (pyth-trip-step m (+ n 2))))
                              (pyth-trip-step m (+ n 2)))))]
     (pyth-trip-step 2 1)))
-
-(defn collatz-seq
-  "Given N, returns next Collatz sequence, starting from N"
-  [n]
-  (let [collatz-step (fn colltz-step [n]
-                       (cond
-                         (= n 1) 0
-                         (odd? n) (inc (*' n 3))
-                         :else (quot n 2)))]
-    (take-while #(> % 0) (iterate collatz-step n))))
-
-(defn abundants-seq
-  "Given N, returns the sequence of abundant numbers below N"
-  [n]
-  (loop [nums (range 1 n)
-         res []]
-    (if (empty? nums)
-      (sort (distinct res))
-      (let [cur (first nums)
-            tail (rest nums)
-            cur-type (perfect? cur)]
-        (if (= cur-type :deficient)
-          (recur (rest nums) res)
-          (let [multiples (range (condp = cur-type :perfect 2 1) (/ n cur))
-                new-abundants (map #(* % cur) multiples)]
-            (recur (remove #(= 0 (rem % cur)) nums) (concat res new-abundants))))))))

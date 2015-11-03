@@ -4,7 +4,7 @@
   ^{:author raptor_MVK}
   euler.volume_1.task1
   (:use clojure.test)
-  (:use tools.math))
+  (:use tools.factorization))
 
 (defn sum-mul
   "Given N, coll, returns the sum of all the multiples of any element of coll below N"

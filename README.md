@@ -5,7 +5,7 @@ Solutions to problems from http://projecteuler.net
 * Combinatorics
   * [15](https://projecteuler.net/problem=15),
     [24](https://projecteuler.net/problem=24)
-* Data manipulation
+* Data representation
   * [11](https://projecteuler.net/problem=11),
     [28](https://projecteuler.net/problem=28)
 * Dynamic programming
@@ -34,4 +34,6 @@ Solutions to problems from http://projecteuler.net
     [23](https://projecteuler.net/problem=23),
     [25](https://projecteuler.net/problem=25),
     [26](https://projecteuler.net/problem=26),
-    [27](https://projecteuler.net/problem=27)
+    [27](https://projecteuler.net/problem=27),
+    [29](https://projecteuler.net/problem=29),
+    [30](https://projecteuler.net/problem=30)

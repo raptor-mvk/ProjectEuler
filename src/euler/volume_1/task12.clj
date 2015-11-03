@@ -4,7 +4,7 @@
   ^{:author raptor_MVK}
   euler.volume_1.task12
   (:use clojure.test)
-  (:use tools.math))
+  (:use tools.factorization))
 
 (defn divisible-triangle-num
   "Given N, returns the value of the first triangle number to have over N divisors"
