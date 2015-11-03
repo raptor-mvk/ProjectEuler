@@ -3,7 +3,30 @@
   tools.comb
   (:use tools.math))
 
-(declare perm-gen pp-count)
+(declare part-perms-count parts-by-coll-count perm-gen)
+
+(defn part-perms-count
+  "Given N, K, returns number of partial permutations of k elements from n"
+  [n k]
+  (reduce *' (map #(/ %1 %2)
+               (reverse (range (inc (- n k)) (inc n))) (range 1 (inc k)))))
+
+(defn parts-by-coll-count
+  "Given N and collection, returns the number of partitions of N by elements of the
+  collection"
+  [n coll]
+  (loop [cur-coll (take-while #(<= % n) coll)
+         res (concat [1] (repeat n 0))]
+    (if (empty? cur-coll)
+      (last res)
+      (recur (rest cur-coll)
+        (let [cur (first cur-coll)]
+          (loop [i cur
+                 cur-res res]
+            (if (> i n)
+              cur-res
+              (recur (inc i) (update-in (vec cur-res) [i]
+                               #(+' % (nth cur-res (- i cur))))))))))))
 
 (defn perm-gen
   "Given N, a sorted collection of digits, returns Nth lexicographical permutation of
@@ -16,9 +39,3 @@
       (concat [(nth coll digit)]
         (perm-gen (rem n tail-perm-count)
           (concat (take digit coll) (drop (inc digit) coll)))))))
-
-(defn pp-count
-  "Given N, K, returns number of partial permutations of k elements from n"
-  [n k]
-  (reduce *' (map #(/ %1 %2)
-               (reverse (range (inc (- n k)) (inc n))) (range 1 (inc k)))))
