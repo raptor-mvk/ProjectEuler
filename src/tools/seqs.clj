@@ -4,7 +4,7 @@
   (:use tools.math)
   (:use tools.factorization))
 
-(declare abundants-seq collatz-seq fib-seq n-subseqs prim-pyth-trip-seq)
+(declare abundants-seq collatz-seq fib-seq prim-pyth-trip-seq)
 
 (defn abundants-seq
   "Given N, returns the sequence of abundant numbers below N"
@@ -36,11 +36,6 @@
   "Returns lazy sequence of Fibonnaci numbers"
   [] (let [next-fib (fn [[prev cur]] [cur (+' prev cur)])]
        (map first (iterate next-fib [1 1]))))
-
-(defn n-subseqs
-  "Given sequence and N, returns all subsequences of length N"
-  [coll n]
-  (partition n (apply interleave (take n (iterate rest coll)))))
 
 (defn prim-pyth-trip-seq
   "Returns lazy sequence of pythagorean triplets"

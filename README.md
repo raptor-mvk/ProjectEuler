@@ -5,7 +5,8 @@ Solutions to problems from http://projecteuler.net
 * Combinatorics
   * [15](https://projecteuler.net/problem=15),
     [24](https://projecteuler.net/problem=24),
-    [31](https://projecteuler.net/problem=31)
+    [31](https://projecteuler.net/problem=31),
+    [32](https://projecteuler.net/problem=32)
 * Data representation
   * [11](https://projecteuler.net/problem=11),
     [28](https://projecteuler.net/problem=28)

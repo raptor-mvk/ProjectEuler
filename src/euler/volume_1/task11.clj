@@ -4,7 +4,7 @@
   ^{:author raptor_MVK}
   euler.volume_1.task11
   (:use clojure.test)
-  (:use tools.seqs)
+  (:use tools.core)
   (:use tools.matrix))
 
 (defn max-prod-grid

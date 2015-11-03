@@ -4,7 +4,7 @@
   ^{:author raptor_MVK}
   euler.volume_1.task8
   (:use clojure.test)
-  (:use tools.seqs)
+  (:use tools.core)
   (:use tools.conversions))
 
 (defn n-prod

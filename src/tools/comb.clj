@@ -1,9 +1,20 @@
 (ns
   ^{:author raptor_MVK}
   tools.comb
-  (:use tools.math))
+  (:use tools.math)
+  (:use tools.core))
 
-(declare part-perms-count parts-by-coll-count perm-gen)
+(declare all-perms part-perms-count parts-by-coll-count perm-gen)
+
+(defn all-perms
+  "Given a sequence, returns all sequence permutations in lexicographical order
+  presuming initial order of a sequence"
+  [coll]
+  (let [n (count coll)]
+    (if (= n 1)
+      [coll]
+      (reduce into [] (map #(map (fn [m] (conj m (nth coll %)))
+                              (all-perms (but-nth coll %))) (range n))))))
 
 (defn part-perms-count
   "Given N, K, returns number of partial permutations of k elements from n"
