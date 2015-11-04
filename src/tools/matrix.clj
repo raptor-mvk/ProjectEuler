@@ -1,6 +1,7 @@
 (ns
   ^{:author raptor_MVK}
-  tools.matrix)
+  tools.matrix
+  (:use tools.core))
 
 (declare diagonalize get-diag get-ldiag transpose)
 
@@ -10,7 +11,7 @@
   (let [n (count m)
         k (count (first m))
         horiz-pts (map #(vector % 0) (range k))
-        vert-pts (fn [x] (map #(vector x %) (range 1 n)))]
+        vert-pts (fn [x] (map #(vector x %) (rrange n)))]
     (concat (map #(get-diag m n k (first %) (last %)) (concat horiz-pts (vert-pts 0)))
       (map #(get-ldiag m n (first %) (last %)) (concat horiz-pts (vert-pts (dec n)))))))
 

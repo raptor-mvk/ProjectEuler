@@ -4,13 +4,14 @@
   ^{:author raptor_MVK}
   euler.volume_1.task29
   (:use clojure.test)
+  (:use tools.core)
   (:use tools.math))
 
 (defn distinct-powers-count
   "Given M, N, returns number of distinct values of a ^ b, where 2 <= a <= M, 2 <= b <= N"
   [m n]
-  (count (distinct (for [x (range 2 (inc m))
-                         y (range 2 (inc n))]
+  (count (distinct (for [x (range+ 2 m)
+                         y (range+ 2 n)]
                      (nat-pow x y)))))
 
 (deftest test1 (is (= (distinct-powers-count 5 5) 15)))

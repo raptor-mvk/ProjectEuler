@@ -5,6 +5,7 @@
 (ns
   ^{:author raptor_MVK}
   euler.volume_1.task33
+  (:use tools.core)
   (:use clojure.test)
   (:use tools.math))
 
@@ -15,7 +16,7 @@
   []
   (let [calc-frac (fn [num1 num2 denom1 denom2]
                     (/ (+ (* 10 num1) num2) (+ (* 10 denom1) denom2)))
-        digits (range 1 10)
+        digits (rrange 10)
         test (fn [[num denom]]
                (let [frac-val (/ num denom)]
                  ((complement empty?) (filter #(= frac-val %)

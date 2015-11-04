@@ -20,7 +20,7 @@
   "Given N, K, returns number of partial permutations of k elements from n"
   [n k]
   (reduce *' (map #(/ %1 %2)
-               (reverse (range (inc (- n k)) (inc n))) (range 1 (inc k)))))
+               (reverse (range+ (inc (- n k)) n)) (rrange+ k))))
 
 (defn parts-by-coll-count
   "Given N and collection, returns the number of partitions of N by elements of the

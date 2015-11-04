@@ -4,6 +4,7 @@
   ^{:author raptor_MVK}
   euler.volume_1.task30
   (:use clojure.test)
+  (:use tools.core)
   (:use tools.conversions)
   (:use tools.math))
 
@@ -13,7 +14,7 @@
   [n]
   (let [max-sum (second (keep-indexed #(when (>= %1 (digits-count %2)) %2)
                           (iterate #(+ % (nat-pow 9 n)) 0)))
-        nums (range 2 (inc max-sum))
+        nums (range+ 2 max-sum)
         digit-power-sum (fn [s] (reduce #(+ %1 (nat-pow %2 n)) 0 s))]
     (reduce + (filter #(= % (digit-power-sum (num2seq %))) nums))))
 

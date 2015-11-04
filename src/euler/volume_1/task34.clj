@@ -1,11 +1,10 @@
 ; Topic: elementary
-; Idea: possible combinations are 1-digit * 4-digit = 4-digit and
-;       2-digit * 3-digit = 4-digit
 
 (ns
   ^{:author raptor_MVK}
   euler.volume_1.task34
   (:use clojure.test)
+  (:use tools.core)
   (:use tools.math)
   (:use tools.conversions))
 
@@ -15,7 +14,7 @@
   []
   (let [max-sum (second (keep-indexed #(when (>= %1 (digits-count %2)) %2)
                           (iterate #(+ % (fact 9)) 0)))
-        nums (range 3 (inc max-sum))
+        nums (range+ 3 max-sum)
         digit-fact-sum (fn [s] (reduce #(+ %1 (fact %2)) 0 s))]
     (reduce + (filter #(= % (digit-fact-sum (num2seq %))) nums))))
 

@@ -1,6 +1,7 @@
 (ns
   ^{:author raptor_MVK}
   tools.seqs
+  (:use tools.core)
   (:use tools.math)
   (:use tools.factorization))
 
@@ -9,7 +10,7 @@
 (defn abundants-seq
   "Given N, returns the sequence of abundant numbers below N"
   [n]
-  (loop [nums (range 1 n)
+  (loop [nums (rrange n)
          res []]
     (if (empty? nums)
       (sort (distinct res))

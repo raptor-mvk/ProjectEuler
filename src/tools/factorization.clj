@@ -1,6 +1,7 @@
 (ns
   ^{:author raptor_MVK}
   tools.factorization
+  (:use tools.core)
   (:use tools.math))
 
 (declare and-divides? divides? factors factors-sum min-prime-factor or-divides? perfect?
@@ -22,7 +23,7 @@
   [n]
   (if (< n 2)
     []
-    (concat [1] (filter #(= 0 (rem n %)) (range 2 (inc (quot n 2)))))))
+    (concat [1] (filter #(= 0 (rem n %)) (range+ 2 (quot n 2))))))
 
 (defn factors-sum
   "Given N, returns the sum of its proper factors"
@@ -83,4 +84,4 @@
   (if (< n 2)
     false
     (let [limit (int (Math/sqrt n))]
-      (every? #(> (rem n %) 0) (take-while #(< % limit) prime-seq$)))))
+      (every? #(> (rem n %) 0) (take-while #(<= % limit) prime-seq$)))))

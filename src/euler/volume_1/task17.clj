@@ -3,6 +3,7 @@
 (ns
   ^{:author raptor_MVK}
   euler.volume_1.task17
+  (:use tools.core)
   (:use clojure.test))
 
 (defn num-letters-count
@@ -25,7 +26,7 @@
                                  (num2len (rem n 1000) true))
                     :else (+ (nth digits-teen-len (quot n 1000)) thousand-len
                             (num2len (rem n 1000) true))))]
-    (reduce + (map #(num2len % false) (range 1 (inc n))))))
+    (reduce + (map #(num2len % false) (rrange+ n)))))
 
 (deftest test1 (is (= (num-letters-count 5) 19)))
 
