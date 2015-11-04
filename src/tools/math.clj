@@ -41,4 +41,4 @@
 (defn pythagorean-triplet?
   "Given A, B, C, returns true, if they form a pythagorean triplet, and false otherwise"
   [a b c]
-  (= (sqr c) (+ (sqr b) (sqr c))))
+  (= (sqr c) (+ (sqr a) (sqr b))))

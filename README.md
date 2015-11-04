@@ -45,4 +45,6 @@ Solutions to problems from http://projecteuler.net
     [36](https://projecteuler.net/problem=36),
     [37](https://projecteuler.net/problem=37),
     [38](https://projecteuler.net/problem=38),
-    [39](https://projecteuler.net/problem=39)
+    [39](https://projecteuler.net/problem=39),
+    [40](https://projecteuler.net/problem=40),
+    [41](https://projecteuler.net/problem=41)

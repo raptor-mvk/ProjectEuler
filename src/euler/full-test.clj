@@ -8,5 +8,8 @@
 
 (def solved-tasks-volume2 [67])
 
-(time (dorun (map #(require (read-string (str "euler.volume_1.task" %)))
-  solved-tasks-volume1)))
+(dorun (map #(require (read-string (str "euler.volume_1.task" %)))
+  solved-tasks-volume1))
+
+(dorun (map #(require (read-string (str "euler.volume_2.task" %)))
+         solved-tasks-volume2))
