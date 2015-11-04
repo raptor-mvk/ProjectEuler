@@ -2,7 +2,7 @@
   ^{:author raptor_MVK}
   tools.math)
 
-(declare digits-count fact gcd nat-pow sqr)
+(declare digits-count fact gcd nat-pow sqr pythagorean-triplet?)
 
 (defn digits-count
   "Given natural N, returns number of its digits in decimal number system;
@@ -37,3 +37,8 @@
   "Given N, returns N^2"
   [n]
   (* n n))
+
+(defn pythagorean-triplet?
+  "Given A, B, C, returns true, if they form a pythagorean triplet, and false otherwise"
+  [a b c]
+  (= (sqr c) (+ (sqr b) (sqr c))))

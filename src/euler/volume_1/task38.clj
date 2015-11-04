@@ -6,7 +6,6 @@
   euler.volume_1.task38
   (:use clojure.test)
   (:use tools.core)
-  (:use tools.factorization)
   (:use tools.conversions))
 
 (defn max-pandigital-multiple
@@ -20,7 +19,6 @@
     (apply max (map #(seq2num %)
                  (filter #(and (nil? (some #{0} %)) (= 9 (count %) (count (distinct %))))
                    (map concat-prod (rrange 10000)))))))
-
 
 (deftest test1 (is (= (max-pandigital-multiple) 932718654)))
 
