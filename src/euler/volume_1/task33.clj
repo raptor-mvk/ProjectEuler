@@ -13,16 +13,14 @@
   fractions (in its lowest common term), less than one in value, and containing two
   digits in the numerator and denominator"
   []
-  (let [last-digit #(rem % 10)
-        first-digit #(quot % 10)
-        calc-frac (fn [num1 num2 denom1 denom2]
+  (let [calc-frac (fn [num1 num2 denom1 denom2]
                     (/ (+ (* 10 num1) num2) (+ (* 10 denom1) denom2)))
         digits (range 1 10)
         test (fn [[num denom]]
                (let [frac-val (/ num denom)]
                  ((complement empty?) (filter #(= frac-val %)
-                   (concat (map #(calc-frac % num denom %) digits)
-                     (map #(calc-frac num % % denom) digits))))))
+                                        (concat (map #(calc-frac % num denom %) digits)
+                                          (map #(calc-frac num % % denom) digits))))))
         fracs (for [x digits
                     y (drop-while #(<= % x) digits)]
                 [x y])]

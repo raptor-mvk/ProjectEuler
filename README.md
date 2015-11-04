@@ -39,4 +39,5 @@ Solutions to problems from http://projecteuler.net
     [27](https://projecteuler.net/problem=27),
     [29](https://projecteuler.net/problem=29),
     [30](https://projecteuler.net/problem=30),
-    [33](https://projecteuler.net/problem=33)
+    [33](https://projecteuler.net/problem=33),
+    [34](https://projecteuler.net/problem=34)
