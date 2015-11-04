@@ -13,9 +13,8 @@
   [n]
   (let [circ-nums (fn [x] (let [xseq (num2seq x)
                                 n (count xseq)]
-                            (map #(seq2num (switch % xseq)) (rrange n))))
-        primes (take-while #(< % n) (prime-seq))]
-    (count (filter #(every? prime? (circ-nums %)) primes))))
+                            (map #(seq2num (switch % xseq)) (rrange n))))]
+    (count (filter #(every? prime? (circ-nums %)) (take-while #(< % n) (prime-seq))))))
 
 (deftest test1 (is (= (circ-primes-count 100) 13)))
 

@@ -5,7 +5,6 @@
   euler.volume_1.task36
   (:use clojure.test)
   (:use tools.core)
-  (:use tools.factorization)
   (:use tools.conversions))
 
 (defn double-base-palindrom-sum
