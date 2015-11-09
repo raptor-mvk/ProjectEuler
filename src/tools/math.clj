@@ -2,7 +2,7 @@
   ^{:author raptor_MVK}
   tools.math)
 
-(declare digits-count fact gcd nat-pow sqr pythagorean-triplet?)
+(declare digits-count fact gcd int? nat-pow sqr pythagorean-triplet? triangle?)
 
 (defn digits-count
   "Given natural N, returns number of its digits in decimal number system;
@@ -28,6 +28,11 @@
     (< m n) (gcd (rem n m) m)
     :else (gcd (rem m n) n)))
 
+(defn int?
+  "Given float X, returns true, if X is integer, and false otherwise"
+  [x]
+  (< (Math/abs (- x (int x))) 1e-8))
+
 (defn nat-pow
   "Given X, N, returns X^N"
   [x n]
@@ -42,3 +47,8 @@
   "Given A, B, C, returns true, if they form a pythagorean triplet, and false otherwise"
   [a b c]
   (= (sqr c) (+ (sqr a) (sqr b))))
+
+(defn triangle?
+  "Given N, returns true, if N is triangle number, and false otherwise"
+  [n]
+  (int? (Math/sqrt (inc (* 8 n)))))
