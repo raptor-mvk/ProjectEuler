@@ -23,9 +23,12 @@
     (range k (inc n))))
 
 (defn rrange
-  "Given N, returns (range 1 n)"
-  [n]
-  (range 1 n))
+  "Given N, returns (range 1 n);
+  given no arguments returns (rest (range))"
+  ([]
+    (rest (range)))
+  ([n]
+    (range 1 n)))
 
 (defn rrange+
   "Given N, returns (range 1 (inc n))"
