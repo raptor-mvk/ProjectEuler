@@ -4,7 +4,20 @@
   (:use tools.math)
   (:use tools.core))
 
-(declare all-perms part-perms-count parts-by-coll-count perm-gen)
+(declare all-part-perms all-perms part-perms-count parts-by-coll-count perm-gen)
+
+(defn all-part-perms
+  "Given K and a sequence, returns all sequence partial permutations of K elements in
+  order, defined by initial order of a sequence"
+  [k coll]
+  (let [n (count coll)]
+    (if (= k 1)
+      (map list coll)
+      (if (= n 1)
+        [coll]
+        (reduce into []
+          (map #(map (fn [m] (conj m (nth coll %)))
+                  (all-part-perms (dec k) (but-nth coll %))) (range n)))))))
 
 (defn all-perms
   "Given a sequence, returns all sequence permutations in lexicographical order

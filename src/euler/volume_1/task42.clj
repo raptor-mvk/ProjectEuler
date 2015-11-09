@@ -1,6 +1,4 @@
 ; Topic: elementary
-; Idea: the answer could not contain more, than 7 digits, because 1 + ... + 8 = 36 and so
-;       it is divisible by 3
 
 (ns
   ^{:author raptor_MVK}
