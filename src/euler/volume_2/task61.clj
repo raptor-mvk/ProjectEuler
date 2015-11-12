@@ -1,4 +1,5 @@
-; Topic: elementary
+; Topic: graph
+; Idea: depth-first search
 
 (ns
   ^{:author raptor_MVK}

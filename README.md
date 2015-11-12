@@ -53,4 +53,7 @@ Solutions to problems from http://projecteuler.net
     [44](https://projecteuler.net/problem=44),
     [45](https://projecteuler.net/problem=45),
     [46](https://projecteuler.net/problem=46),
-    [61](https://projecteuler.net/problem=61)
+    [47](https://projecteuler.net/problem=47),
+    [48](https://projecteuler.net/problem=48)
+* Graph
+  * [61](https://projecteuler.net/problem=61)

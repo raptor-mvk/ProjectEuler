@@ -2,8 +2,8 @@
   ^{:author raptor_MVK}
   tools.math)
 
-(declare digits-count fact gcd heptagonal? hexagonal? int? nat-pow sqr square? pentagonal?
-  pythagorean-triplet? triangle?)
+(declare digits-count fact gcd heptagonal? hexagonal? int? nat-pow nat-pow-mod sqr
+  square? pentagonal? pythagorean-triplet? triangle?)
 
 (defn digits-count
   "Given natural N, returns number of its digits in decimal number system;
@@ -50,6 +50,11 @@
   "Given X, N, returns X^N"
   [x n]
   (reduce *' (repeat n x)))
+
+(defn nat-pow-mod
+  "Given X, N, K, returns X^N mod K"
+  [x n k]
+  (reduce #(rem (*' %1 %2) k) 1 (repeat n x)))
 
 (defn sqr
   "Given N, returns N^2"
