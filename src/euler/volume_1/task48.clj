@@ -18,5 +18,3 @@
 (deftest test2 (is (= (self-power-sum 1000) 9110846700)))
 
 (time (run-tests 'euler.volume_1.task48))
-
-(shutdown-agents)

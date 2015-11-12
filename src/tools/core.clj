@@ -2,7 +2,7 @@
   ^{:author raptor_MVK}
   tools.core)
 
-(declare but-nth n-subseqs range+ rrange rrange+ switch)
+(declare but-nth n-subseqs range+ rrange rrange+ switch take-drop-while)
 
 (defn but-nth
   "Given collection and N, returns collection with nth element removed"
@@ -39,3 +39,8 @@
   "Given N and a collection, returns collection with first N elements moved to the end"
   [n coll]
   (concat (drop n coll) (take n coll)))
+
+(defn take-drop-while
+  "Given pred, pred2 and coll, returns (take-while pred2 (drop-while pred coll))"
+  [pred pred2 coll]
+  (take-while pred2 (drop-while pred coll)))

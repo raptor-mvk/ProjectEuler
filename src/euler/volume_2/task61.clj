@@ -14,8 +14,8 @@
   is represented by a different number in the set"
   []
   (let [octagonal-nums (filter #(> (quot (rem % 100) 10) 0)
-                         (take-while #(< % 10000)
-                           (drop-while #(< % 1000) (map #(* % (- (* 3 %) 2)) (rrange)))))
+                         (take-drop-while #(< % 1000) #(< % 10000)
+                           (map #(* % (- (* 3 %) 2)) (rrange))))
         last-num (fn [coll] (+ (quot (first coll) 100)
                               (* (rem (last coll) 100) 100)))
         find-nums (fn [coll test-fn]
@@ -41,6 +41,6 @@
                           [triangle? square? pentagonal? hexagonal? heptagonal?])
                     octagonal-nums))))))
 
-  (deftest test1 (is (= (figurate-cycle) 28684)))
+(deftest test1 (is (= (figurate-cycle) 28684)))
 
-  (time (run-tests 'euler.volume_1.task61))
+(time (run-tests 'euler.volume_1.task61))
