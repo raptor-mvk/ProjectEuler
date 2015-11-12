@@ -52,4 +52,5 @@ Solutions to problems from http://projecteuler.net
     [43](https://projecteuler.net/problem=43),
     [44](https://projecteuler.net/problem=44),
     [45](https://projecteuler.net/problem=45),
-    [46](https://projecteuler.net/problem=46)
+    [46](https://projecteuler.net/problem=46),
+    [61](https://projecteuler.net/problem=61)

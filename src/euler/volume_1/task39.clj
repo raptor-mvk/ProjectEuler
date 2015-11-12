@@ -23,3 +23,5 @@
 (deftest test1 (is (= (max-rigth-triangle-perimeters-count 1000) 840)))
 
 (time (run-tests 'euler.volume_1.task39))
+
+(shutdown-agents)

@@ -28,3 +28,5 @@
 (deftest test2 (is (= (max-recur-cycle 1000) 983)))
 
 (time (run-tests 'euler.volume_1.task26))
+
+(shutdown-agents)
