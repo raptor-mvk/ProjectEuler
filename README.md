@@ -8,7 +8,8 @@ Solutions to problems from http://projecteuler.net
     [31](https://projecteuler.net/problem=31),
     [32](https://projecteuler.net/problem=32),
     [41](https://projecteuler.net/problem=41),
-    [51](https://projecteuler.net/problem=51)
+    [51](https://projecteuler.net/problem=51),
+    [53](https://projecteuler.net/problem=53)
 * Data representation
   * [11](https://projecteuler.net/problem=11),
     [28](https://projecteuler.net/problem=28)
@@ -59,5 +60,7 @@ Solutions to problems from http://projecteuler.net
     [49](https://projecteuler.net/problem=49),
     [50](https://projecteuler.net/problem=50),
     [52](https://projecteuler.net/problem=52)
+* Games
+  * [54](https://projecteuler.net/problem=54)
 * Graph
   * [61](https://projecteuler.net/problem=61)
