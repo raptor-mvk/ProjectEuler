@@ -4,7 +4,7 @@
   (:use clojure.test)
   (:use tools.core))
 
-(def solved-tasks-volume1 (rrange+ 49))
+(def solved-tasks-volume1 (rrange+ 50))
 
 (def solved-tasks-volume2 [61 67])
 

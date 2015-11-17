@@ -1,5 +1,6 @@
 ; Topic: graph
-; Idea: depth-first search
+; Idea: two-digit numbers are vertices and 4-digit numbers are edges,
+;       using depth-first search
 
 (ns
   ^{:author raptor_MVK}
