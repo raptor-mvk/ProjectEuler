@@ -6,7 +6,9 @@ Solutions to problems from http://projecteuler.net
   * [15](https://projecteuler.net/problem=15),
     [24](https://projecteuler.net/problem=24),
     [31](https://projecteuler.net/problem=31),
-    [32](https://projecteuler.net/problem=32)
+    [32](https://projecteuler.net/problem=32),
+    [41](https://projecteuler.net/problem=41),
+    [51](https://projecteuler.net/problem=51)
 * Data representation
   * [11](https://projecteuler.net/problem=11),
     [28](https://projecteuler.net/problem=28)
@@ -47,7 +49,6 @@ Solutions to problems from http://projecteuler.net
     [38](https://projecteuler.net/problem=38),
     [39](https://projecteuler.net/problem=39),
     [40](https://projecteuler.net/problem=40),
-    [41](https://projecteuler.net/problem=41),
     [42](https://projecteuler.net/problem=42),
     [43](https://projecteuler.net/problem=43),
     [44](https://projecteuler.net/problem=44),
@@ -57,6 +58,6 @@ Solutions to problems from http://projecteuler.net
     [48](https://projecteuler.net/problem=48),
     [49](https://projecteuler.net/problem=49),
     [50](https://projecteuler.net/problem=50),
-    [51](https://projecteuler.net/problem=51)
+    [52](https://projecteuler.net/problem=52)
 * Graph
   * [61](https://projecteuler.net/problem=61)
