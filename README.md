@@ -10,6 +10,8 @@ Solutions to problems from http://projecteuler.net
     [41](https://projecteuler.net/problem=41),
     [51](https://projecteuler.net/problem=51),
     [53](https://projecteuler.net/problem=53)
+* Cryptography
+  * [59](https://projecteuler.net/problem=59)
 * Data representation
   * [11](https://projecteuler.net/problem=11),
     [28](https://projecteuler.net/problem=28),
