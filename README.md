@@ -59,7 +59,8 @@ Solutions to problems from http://projecteuler.net
     [48](https://projecteuler.net/problem=48),
     [49](https://projecteuler.net/problem=49),
     [50](https://projecteuler.net/problem=50),
-    [52](https://projecteuler.net/problem=52)
+    [52](https://projecteuler.net/problem=52),
+    [55](https://projecteuler.net/problem=55)
 * Games
   * [54](https://projecteuler.net/problem=54)
 * Graph
