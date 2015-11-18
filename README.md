@@ -12,7 +12,8 @@ Solutions to problems from http://projecteuler.net
     [53](https://projecteuler.net/problem=53)
 * Data representation
   * [11](https://projecteuler.net/problem=11),
-    [28](https://projecteuler.net/problem=28)
+    [28](https://projecteuler.net/problem=28),
+    [58](https://projecteuler.net/problem=58)
 * Dynamic programming
   * [18](https://projecteuler.net/problem=18),
     [67](https://projecteuler.net/problem=67)
@@ -62,7 +63,8 @@ Solutions to problems from http://projecteuler.net
     [52](https://projecteuler.net/problem=52),
     [55](https://projecteuler.net/problem=55),
     [56](https://projecteuler.net/problem=56),
-    [57](https://projecteuler.net/problem=57)
+    [57](https://projecteuler.net/problem=57),
+    [58](https://projecteuler.net/problem=58)
 * Games
   * [54](https://projecteuler.net/problem=54)
 * Graph
