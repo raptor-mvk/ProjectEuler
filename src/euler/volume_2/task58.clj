@@ -2,7 +2,7 @@
 
 (ns
   ^{:author raptor_MVK}
-  euler.volume_1.task58
+  euler.volume_2.task58
   (:use tools.math)
   (:use tools.factorization)
   (:use clojure.test))
@@ -24,4 +24,4 @@
 
 (deftest test1 (is (= (min-spiral-prime-ratio 0.1) 26241)))
 
-(time (run-tests 'euler.volume_1.task58))
+(time (run-tests 'euler.volume_2.task58))

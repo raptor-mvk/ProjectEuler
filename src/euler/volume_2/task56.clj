@@ -2,7 +2,7 @@
 
 (ns
   ^{:author raptor_MVK}
-  euler.volume_1.task56
+  euler.volume_2.task56
   (:use tools.core)
   (:use tools.math)
   (:use tools.conversions)
@@ -17,4 +17,4 @@
 
 (deftest test1 (is (= (max-power-digit-sum 100 100) 972)))
 
-(time (run-tests 'euler.volume_1.task56))
+(time (run-tests 'euler.volume_2.task56))

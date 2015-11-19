@@ -3,7 +3,7 @@
 
 (ns
   ^{:author raptor_MVK}
-  euler.volume_1.task52
+  euler.volume_2.task52
   (:use tools.core)
   (:use tools.math)
   (:use tools.conversions)
@@ -27,4 +27,4 @@
 
 (deftest test1 (is (= (min-permuted-6-multiple) 142857)))
 
-(time (run-tests 'euler.volume_1.task52))
+(time (run-tests 'euler.volume_2.task52))

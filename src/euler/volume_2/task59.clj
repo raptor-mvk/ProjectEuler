@@ -3,7 +3,7 @@
 
 (ns
   ^{:author raptor_MVK}
-  euler.volume_1.task59
+  euler.volume_2.task59
   (:use tools.core)
   (:use clojure.test))
 
@@ -75,4 +75,4 @@
 
 (deftest test1 (is (= (xor-decode-sum arr1) 107359)))
 
-(time (run-tests 'euler.volume_1.task59))
+(time (run-tests 'euler.volume_2.task59))

@@ -2,7 +2,7 @@
 
 (ns
   ^{:author raptor_MVK}
-  euler.volume_1.task57
+  euler.volume_2.task57
   (:use tools.conversions)
   (:use clojure.test))
 
@@ -18,4 +18,4 @@
 
 (deftest test1 (is (= (longer-numberator-count 1000) 153)))
 
-(time (run-tests 'euler.volume_1.task57))
+(time (run-tests 'euler.volume_2.task57))

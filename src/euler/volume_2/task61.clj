@@ -4,7 +4,7 @@
 
 (ns
   ^{:author raptor_MVK}
-  euler.volume_1.task61
+  euler.volume_2.task61
   (:use clojure.test)
   (:use tools.core)
   (:use tools.math))
@@ -44,4 +44,4 @@
 
 (deftest test1 (is (= (figurate-cycle) 28684)))
 
-(time (run-tests 'euler.volume_1.task61))
+(time (run-tests 'euler.volume_2.task61))

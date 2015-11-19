@@ -5,7 +5,7 @@
 
 (ns
   ^{:author raptor_MVK}
-  euler.volume_1.task51
+  euler.volume_2.task51
   (:use clojure.test)
   (:use clojure.set)
   (:use tools.core)
@@ -53,4 +53,4 @@
 
 (deftest test1 (is (= (eight-primes-family) 121313)))
 
-(time (run-tests 'euler.volume_1.task51))
+(time (run-tests 'euler.volume_2.task51))

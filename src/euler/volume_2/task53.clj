@@ -2,7 +2,7 @@
 
 (ns
   ^{:author raptor_MVK}
-  euler.volume_1.task53
+  euler.volume_2.task53
   (:use tools.comb)
   (:use tools.core)
   (:use clojure.test))
@@ -18,4 +18,4 @@
 
 (deftest test1 (is (= (greater-part-perms-count 1000000 100) 4075)))
 
-(time (run-tests 'euler.volume_1.task53))
+(time (run-tests 'euler.volume_2.task53))

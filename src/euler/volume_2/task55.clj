@@ -2,7 +2,7 @@
 
 (ns
   ^{:author raptor_MVK}
-  euler.volume_1.task55
+  euler.volume_2.task55
   (:use tools.core)
   (:use clojure.test))
 
@@ -31,4 +31,4 @@
 
 (deftest test1 (is (= (potent-lychrel-nums-count) 249)))
 
-(time (run-tests 'euler.volume_1.task55))
+(time (run-tests 'euler.volume_2.task55))

@@ -2,7 +2,7 @@
 
 (ns
   ^{:author raptor_MVK}
-  euler.volume_1.task54
+  euler.volume_2.task54
   (:use clojure.test))
 
 (defn winning-poker-hands-count
@@ -1060,4 +1060,4 @@
 
 (deftest test1 (is (= (winning-poker-hands-count arr1) 376)))
 
-(time (run-tests 'euler.volume_1.task54))
+(time (run-tests 'euler.volume_2.task54))
