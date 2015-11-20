@@ -2,8 +2,8 @@
   ^{:author raptor_MVK}
   tools.math)
 
-(declare digits-count fact gcd heptagonal? hexagonal? int? nat-pow nat-pow-mod sqr
-  square? pentagonal? pythagorean-triplet? triangle?)
+(declare digits-count fact gcd heptagonal? hexagonal? int? nat-pow nat-pow-mod
+  pentagonal? pythagorean-triplet? round-to-fixed sqr square? triangle?)
 
 (defn digits-count
   "Given natural N, returns number of its digits in decimal number system;
@@ -56,11 +56,6 @@
   [x n k]
   (reduce #(rem (*' %1 %2) k) 1 (repeat n x)))
 
-(defn sqr
-  "Given N, returns N^2"
-  [n]
-  (* n n))
-
 (defn pentagonal?
   "Given N, returns true, if N is a pentagonal number, and false otherwise"
   [n]
@@ -71,6 +66,17 @@
   "Given A, B, C, returns true, if they form a pythagorean triplet, and false otherwise"
   [a b c]
   (= (sqr c) (+ (sqr a) (sqr b))))
+
+(defn round-to-fixed
+  "Given X and N, returns X rounded to N decimal places"
+  [x n]
+  (let [mult (nat-pow 10 n)]
+    (double (/ (Math/round (* (double x) mult)) mult))))
+
+(defn sqr
+  "Given N, returns N^2"
+  [n]
+  (* n n))
 
 (defn square?
   "Given N, returns true, if N is a perfect square, and false otherwise"
