@@ -1,9 +1,10 @@
 ; Topic: elementary
-; TODO: slow realization
+; Idea: use probabilistic prime test
 
 (ns
   ^{:author raptor_MVK}
   euler.volume_8.task387
+  (:import [java.math BigInteger])
   (:use tools.conversions)
   (:use tools.factorization)
   (:use tools.core)
@@ -25,7 +26,8 @@
                                  (recur (inc i) next-nums (concat res next-nums)))))
         strong-harshad-nums (filter #(prime? (/ % (reduce + (num2seq %))))
                               trunc-harshad-nums)]
-    (reduce +' (filter prime? (flatten (map add-prime-digit strong-harshad-nums))))))
+    (reduce +' (filter probable-prime?
+                 (flatten (map add-prime-digit strong-harshad-nums))))))
 
 (deftest test1 (is (= (sum-strong-right-trunc-harshad-primes 4) 90619)))
 

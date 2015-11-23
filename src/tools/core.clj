@@ -38,7 +38,9 @@
 (defn switch
   "Given N and a collection, returns collection with first N elements moved to the end"
   [n coll]
-  (concat (drop n coll) (take n coll)))
+  (if (= n 1)
+    (concat (rest coll) [(first coll)])
+    (concat (drop n coll) (take n coll))))
 
 (defn take-drop-while
   "Given pred, pred2 and coll, returns (take-while pred2 (drop-while pred coll))"

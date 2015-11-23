@@ -3,7 +3,7 @@
   tools.math)
 
 (declare digits-count fact gcd heptagonal? hexagonal? int-power? int? nat-pow nat-pow-mod
-  pentagonal? pythagorean-triplet? round-to-fixed sqr square? triangle?)
+  pentagonal? pythagorean-triplet? round-to-fixed sgn sqr square? triangle?)
 
 (defn digits-count
   "Given natural N, returns number of its digits in decimal number system;
@@ -85,6 +85,14 @@
   [x n]
   (let [mult (nat-pow 10 n)]
     (double (/ (Math/round (* (double x) mult)) mult))))
+
+(defn sgn
+  "Given x, returns signum(x)"
+  [x]
+  (cond
+    (< x -1e-15) -1
+    (> x 1e-15) 1
+    :else 0))
 
 (defn sqr
   "Given N, returns N^2"

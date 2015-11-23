@@ -5,7 +5,7 @@
   (:use tools.math))
 
 (declare and-divides? divides? factors factors-sum min-prime-factor or-divides? perfect?
-  prime-factors prime-seq prime-seq$ prime?)
+  prime-factors prime-seq prime-seq$ prime? probable-prime?)
 
 (defn and-divides?
   "Given N, coll, returns true, if N is the multiple of every element of coll, and false
@@ -85,3 +85,9 @@
     false
     (let [limit (int (Math/sqrt n))]
       (every? #(> (rem n %) 0) (take-while #(<= % limit) prime-seq$)))))
+
+(defn probable-prime?
+  "Given a number N, returns true, if N is prime with certainty 99.9%, and false
+  otherwise"
+  [n]
+  (.isProbablePrime (BigInteger. (str n)) 10))
