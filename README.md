@@ -9,8 +9,7 @@ Solutions to problems from http://projecteuler.net
     [32](https://projecteuler.net/problem=32),
     [41](https://projecteuler.net/problem=41),
     [51](https://projecteuler.net/problem=51),
-    [53](https://projecteuler.net/problem=53),
-    [493](https://projecteuler.net/problem=493)
+    [53](https://projecteuler.net/problem=53)
 * Cryptography
   * [59](https://projecteuler.net/problem=59)
 * Data representation
@@ -68,8 +67,12 @@ Solutions to problems from http://projecteuler.net
     [56](https://projecteuler.net/problem=56),
     [57](https://projecteuler.net/problem=57),
     [58](https://projecteuler.net/problem=58),
-    [60](https://projecteuler.net/problem=60)
+    [60](https://projecteuler.net/problem=60),
+    [387](https://projecteuler.net/problem=387)
 * Games
   * [54](https://projecteuler.net/problem=54)
 * Graph
   * [61](https://projecteuler.net/problem=61)
+* Probability theory
+  * [323](https://projecteuler.net/problem=323),
+    [493](https://projecteuler.net/problem=493)

@@ -1,4 +1,4 @@
-; Topic: combinatorics
+; Topic: probability theory
 ; Idea: define the probability of C distinct colors as
 ;       N(k, total, good, C), then N(0, any, any, 0) = 1,
 ;       N(0, any, any, any > 0) = 0,
@@ -17,7 +17,8 @@
 
 (defn expected-distinct-colors
   "Given N, K, M, returns the expected number of distinct colors in K randomly picked
-  balls from N balls, where there is M balls for each color"
+  balls from N balls, where there is M balls for each color, rounded to 9 digits after
+  the decimal point"
   [n k m]
   (let [colors-count (quot n m)
         k-good-prob (fn [k total good]

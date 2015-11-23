@@ -2,7 +2,7 @@
   ^{:author raptor_MVK}
   tools.math)
 
-(declare digits-count fact gcd heptagonal? hexagonal? int? nat-pow nat-pow-mod
+(declare digits-count fact gcd heptagonal? hexagonal? int-power? int? nat-pow nat-pow-mod
   pentagonal? pythagorean-triplet? round-to-fixed sqr square? triangle?)
 
 (defn digits-count
@@ -40,6 +40,19 @@
   [n]
   (let [root (Math/sqrt (inc (* 8 n)))]
     (and (int? root) (= 3 (rem (int root) 4)))))
+
+(defn int-power?
+  "Given N, returns true, if N is a power of an integer, and false otherwise"
+  [n]
+  (if (= n 1)
+    false
+    (loop [i 2]
+      (let [res (Math/pow n (/ 1.0 i))]
+        (if (int? res)
+          true
+          (if (< res 2.0)
+            false
+            (recur (inc i))))))))
 
 (defn int?
   "Given float X, returns true, if X is integer, and false otherwise"
