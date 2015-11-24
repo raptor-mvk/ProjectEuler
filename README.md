@@ -77,5 +77,6 @@ Solutions to problems from http://projecteuler.net
   * [102](https://projecteuler.net/problem=102),
     [144](https://projecteuler.net/problem=144)
 * Probability theory
-  * [323](https://projecteuler.net/problem=323),
+  * [205](https://projecteuler.net/problem=205),
+    [323](https://projecteuler.net/problem=323),
     [493](https://projecteuler.net/problem=493)
