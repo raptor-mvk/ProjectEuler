@@ -68,6 +68,8 @@ Solutions to problems from http://projecteuler.net
     [57](https://projecteuler.net/problem=57),
     [58](https://projecteuler.net/problem=58),
     [60](https://projecteuler.net/problem=60),
+    [206](https://projecteuler.net/problem=206),
+    [243](https://projecteuler.net/problem=243),
     [387](https://projecteuler.net/problem=387)
 * Games
   * [54](https://projecteuler.net/problem=54)

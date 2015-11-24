@@ -5,7 +5,7 @@
   (:use tools.math))
 
 (declare and-divides? divides? factors factors-sum min-prime-factor or-divides? perfect?
-  prime-factors prime-seq prime-seq$ prime? probable-prime?)
+  prime-factors prime-seq prime-seq$ prime? probable-prime? totient)
 
 (defn and-divides?
   "Given N, coll, returns true, if N is the multiple of every element of coll, and false
@@ -91,3 +91,9 @@
   otherwise"
   [n]
   (.isProbablePrime (BigInteger. (str n)) 10))
+
+(defn totient
+  "Given N, returns value of Euler's totient function of N"
+  [n]
+  (let [factors (distinct (prime-factors n))]
+    (*' n (reduce #(*' %1 (-' 1 (/ 1 %2))) 1 factors))))
