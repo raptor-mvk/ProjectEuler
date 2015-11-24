@@ -3,7 +3,7 @@
   tools.math)
 
 (declare digits-count fact gcd heptagonal? hexagonal? int-power? int? nat-pow nat-pow-mod
-  pentagonal? pythagorean-triplet? round-to-fixed sgn sqr square? triangle?)
+  pentagonal? pythagorean-triplet? round-to-fixed sgn solve-sqr-eq sqr square? triangle?)
 
 (defn digits-count
   "Given natural N, returns number of its digits in decimal number system;
@@ -93,6 +93,18 @@
     (< x -1e-15) -1
     (> x 1e-15) 1
     :else 0))
+
+(defn solve-sqr-eq
+  "Given square equation (a, b, c), returns its solution, if there is no solution,
+  returns empty vector"
+  [[a b c]]
+  (let [discr (- (* b b) (* 4 a c))
+        solution (fn [oper] (/ (oper (- b) (Math/sqrt discr)) (* 2 a)))]
+    (cond
+      (or (and (= a 0) (= b 0)) (< discr 0)) []
+      (= a 0) (/ (- c) b)
+      (> discr 0) (map solution [+ -])
+      (= discr 0) (solution +))))
 
 (defn sqr
   "Given N, returns N^2"

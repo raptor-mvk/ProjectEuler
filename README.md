@@ -74,7 +74,8 @@ Solutions to problems from http://projecteuler.net
 * Graph
   * [61](https://projecteuler.net/problem=61)
 * Geometry
-  * [102](https://projecteuler.net/problem=102)
+  * [102](https://projecteuler.net/problem=102),
+    [144](https://projecteuler.net/problem=144)
 * Probability theory
   * [323](https://projecteuler.net/problem=323),
     [493](https://projecteuler.net/problem=493)
