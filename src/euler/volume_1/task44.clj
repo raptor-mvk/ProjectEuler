@@ -1,4 +1,4 @@
-; Topic: elementary
+; Topic: number theory
 ; Idea: search through pentagonal numbers for sum S, checking S - X,
 ;       S - 2 * X for pentagonality, where X moving from 1 to S / 2
 

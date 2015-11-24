@@ -1,4 +1,4 @@
-; Topic: elementary
+; Topic: number theory
 ; Idea: for each prime calculate sums of consecutive primes less than N,
 ;       while prime * length of the current longest sequence < N
 

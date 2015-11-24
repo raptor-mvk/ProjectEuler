@@ -1,4 +1,4 @@
-; Topic: cryptography
+; Topic: strings
 ; Idea: parallel decoding, checking, that result is plain English text
 
 (ns

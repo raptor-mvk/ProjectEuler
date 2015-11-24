@@ -1,4 +1,4 @@
-; Topic: elementary
+; Topic: number theory
 ; Idea: b should be prime, because for n = 0 formula turns out to b
 ;       a should has the same parity as b, because for n = 1 formula turns out to
 ;       a + b + 1

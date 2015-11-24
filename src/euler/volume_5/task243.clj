@@ -1,4 +1,4 @@
-; Topic: elementary
+; Topic: number theory
 ; Idea: Euler's totient function
 
 (ns

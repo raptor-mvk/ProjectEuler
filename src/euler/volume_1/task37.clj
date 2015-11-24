@@ -1,4 +1,4 @@
-; Topic: elementary
+; Topic: number theory
 
 (ns
   ^{:author raptor_MVK}

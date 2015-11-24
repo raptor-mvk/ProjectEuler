@@ -1,4 +1,4 @@
-; Topic: Pythagorean triplets
+; Topic: number theory
 
 (ns
   ^{:author raptor_MVK}

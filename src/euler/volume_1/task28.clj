@@ -1,4 +1,4 @@
-; Topic: data representation
+; Topic: grids
 
 (ns
   ^{:author raptor_MVK}

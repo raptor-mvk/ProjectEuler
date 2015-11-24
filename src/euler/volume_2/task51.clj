@@ -1,4 +1,4 @@
-; Topic: combinatorics
+; Topic: number theory
 ; Idea: the answer has at least 5 digits with 3 changing digits
 ;       if the number of digits is not divisible by 3, then there
 ;       would be at least 3 numbers divisible by 3 in sequence

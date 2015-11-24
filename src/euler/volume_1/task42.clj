@@ -1,4 +1,4 @@
-; Topic: elementary
+; Topic: strings
 
 (ns
   ^{:author raptor_MVK}

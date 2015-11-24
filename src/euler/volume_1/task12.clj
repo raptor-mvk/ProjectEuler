@@ -1,4 +1,4 @@
-; Topic: figurate numbers
+; Topic: number theory
 
 (ns
   ^{:author raptor_MVK}

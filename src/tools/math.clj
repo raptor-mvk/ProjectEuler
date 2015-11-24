@@ -2,8 +2,15 @@
   ^{:author raptor_MVK}
   tools.math)
 
-(declare digits-count fact gcd heptagonal? hexagonal? int-power? int? nat-pow nat-pow-mod
-  pentagonal? pythagorean-triplet? round-to-fixed sgn solve-sqr-eq sqr square? triangle?)
+(declare cont-frac digits-count fact gcd heptagonal? hexagonal? int-power? int? nat-pow
+  nat-pow-mod  pentagonal? pythagorean-triplet? round-to-fixed sgn solve-sqr-eq sqr
+  square? triangle?)
+
+(defn cont-frac
+  "Given N and a representation of the infinite continued fraction, returns Nth partial
+   value"
+  [n frac]
+  (reduce #(+ %2 (/ %1)) (reverse (take n frac))))
 
 (defn digits-count
   "Given natural N, returns number of its digits in decimal number system;

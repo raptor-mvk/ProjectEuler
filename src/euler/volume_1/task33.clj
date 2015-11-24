@@ -1,6 +1,4 @@
 ; Topic: elementary
-; Idea: possible combinations are 1-digit * 4-digit = 4-digit and
-;       2-digit * 3-digit = 4-digit
 
 (ns
   ^{:author raptor_MVK}

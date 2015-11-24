@@ -1,4 +1,4 @@
-; Topic: elementary
+; Topic: number theory
 ; Idea: use probabilistic prime test
 
 (ns

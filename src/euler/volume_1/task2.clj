@@ -1,4 +1,4 @@
-; Topic: Fibonnaci numbers
+; Topic: elementary
 
 (ns
   ^{:author raptor_MVK}

@@ -1,4 +1,4 @@
-; Topic: elementary
+; Topic: number theory
 ; Idea: use sieve technique, storing for each sum all pairs [prime, n],
 ;       which produce this sum = prime + 2 * n ^ 2
 
