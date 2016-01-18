@@ -39,6 +39,8 @@ Solutions to problems from http://projecteuler.net
     [56](https://projecteuler.net/problem=56),
     [57](https://projecteuler.net/problem=57),
     [58](https://projecteuler.net/problem=58),
+    [62](https://projecteuler.net/problem=62),
+    [63](https://projecteuler.net/problem=63),
     [206](https://projecteuler.net/problem=206)
 * Games
   * [54](https://projecteuler.net/problem=54)
