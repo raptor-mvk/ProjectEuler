@@ -4,7 +4,8 @@
 (ns
   ^{:author raptor_MVK}
   euler.volume_1.task40
-  (:use clojure.test))
+  (:use clojure.test)
+  (:use tools.core))
 
 (defn champernowne-prod
   "Returns, d1 * d10 * d100 * d1000 * d10000 * d100000 * d1000000, where di - ith digit
@@ -12,7 +13,7 @@
   []
   (let [champernowne (apply str (range 185200))
         indices (take 7 (iterate #(* % 10) 1))]
-    (reduce #(* %1 (- (int %2) (int \0))) 1 (map #(nth champernowne %) indices))))
+    (reduce #(* %1 (- (int %2) (int \0))) 1 (get-by-indices champernowne indices))))
 
 (deftest test1 (is (= (champernowne-prod) 210)))
 

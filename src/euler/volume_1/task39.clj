@@ -17,8 +17,7 @@
                                               (for [a (rrange+ (quot (- n 2) 3))
                                                     b (range+ (inc a) (quot (- n a 1) 2))]
                                                 (vector a b (- n a b))))))]
-    (first (apply max-key second (map-indexed vector
-                                   (pmap pythagorean-triplets-count (range+ n)))))))
+    (max-index (pmap pythagorean-triplets-count (range+ n)))))
 
 (deftest test1 (is (= (max-rigth-triangle-perimeters-count 1000) 840)))
 

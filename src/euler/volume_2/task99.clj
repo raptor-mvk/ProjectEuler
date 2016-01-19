@@ -1,16 +1,17 @@
 ; Topic: elementary
+; Idea: compare log10 of numbers instead of numbers themselves
 
 (ns
   ^{:author raptor_MVK}
   euler.volume_2.task99
-  (:use clojure.test))
+  (:use clojure.test)
+  (:use tools.core))
 
 (defn max-pow-index
   "Given a sequence of pairs (X,N), returns index (starting from 1) of the maximal
   value of X^N"
   [coll]
-  (last (apply max-key first (map-indexed #(vector (* (Math/log10 (first %2)) (last %2))
-                                             (inc %1)) coll))))
+  (inc (max-index (map #(* (Math/log10 (first %)) (last %)) coll))))
 
 (def arr1 [[519432 525806] [632382 518061] [78864 613712] [466580 530130] [780495 510032]
            [525895 525320] [15991 714883] [960290 502358] [760018 511029] [166800 575487]

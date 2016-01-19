@@ -32,7 +32,7 @@
                                         (clojure.set/difference (set (range+ n)) (set %)))
                                   (all-part-perms 3 (range+ n)))))
         extract-digits (fn [digits coll]
-                         (map #(nth coll %) (sort (vec digits))))
+                         (get-by-indices coll (sort (vec digits))))
         group-by-digits (fn [[equal-digits other-digits] coll]
                           (when (apply = (extract-digits equal-digits coll))
                             (extract-digits other-digits coll)))]

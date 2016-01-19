@@ -3,7 +3,7 @@
   tools.matrix
   (:use tools.core))
 
-(declare diagonalize get-diag get-ldiag transpose)
+(declare diagonalize get-column get-diag get-ldiag transpose)
 
 (defn diagonalize
   "Given matrix, retunrs a sequence of all its diagonal vectors"
@@ -14,6 +14,11 @@
         vert-pts (fn [x] (map #(vector x %) (rrange n)))]
     (concat (map #(get-diag m n k (first %) (last %)) (concat horiz-pts (vert-pts 0)))
       (map #(get-ldiag m n (first %) (last %)) (concat horiz-pts (vert-pts (dec n)))))))
+
+(defn get-column
+  "Given matrix and i, retuns i-th column"
+  [m i]
+  (map #(nth % i) m))
 
 (defn get-diag
   "Given matrix, N, K, X, Y returns vector, containing right-bottom diagonal, started
@@ -35,5 +40,4 @@
   "Given matrix, returns transposed matrix"
   [m]
   (let [k (count (first m))]
-    (map (fn [i] (map #(nth % i) m)) (range k))))
-
+    (map #(get-column m %) (range k))))
