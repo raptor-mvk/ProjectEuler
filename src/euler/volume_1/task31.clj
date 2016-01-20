@@ -1,10 +1,10 @@
-; Topic: combinatorics
+; Topic: dynamic programming
 
 (ns
   ^{:author raptor_MVK}
   euler.volume_1.task31
   (:use clojure.test)
-  (:use tools.comb))
+  (:use tools.dynprog))
 
 (defn coin-sums-count
   "Given N, returns the number of different ways can N pences be made using coins 1p, 2p,

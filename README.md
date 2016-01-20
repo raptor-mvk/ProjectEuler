@@ -5,13 +5,15 @@ Solutions to problems from http://projecteuler.net
 * Combinatorics
   * [15](https://projecteuler.net/problem=15),
     [24](https://projecteuler.net/problem=24),
-    [31](https://projecteuler.net/problem=31),
     [32](https://projecteuler.net/problem=32),
     [41](https://projecteuler.net/problem=41),
     [53](https://projecteuler.net/problem=53)
 * Dynamic programming
   * [18](https://projecteuler.net/problem=18),
-    [67](https://projecteuler.net/problem=67)
+    [31](https://projecteuler.net/problem=31),
+    [67](https://projecteuler.net/problem=67),
+    [76](https://projecteuler.net/problem=76),
+    [77](https://projecteuler.net/problem=77)
 * Elementary
   * [1](https://projecteuler.net/problem=1),
     [2](https://projecteuler.net/problem=2),

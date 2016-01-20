@@ -4,7 +4,7 @@
   (:use tools.math)
   (:use tools.core))
 
-(declare all-part-perms all-perms part-perms-count parts-by-coll-count perm-gen)
+(declare all-part-perms all-perms part-perms-count perm-gen)
 
 (defn all-part-perms
   "Given K and a sequence, returns all sequence partial permutations of K elements in
@@ -34,23 +34,6 @@
   [n k]
   (reduce *' (map #(/ %1 %2)
                (reverse (range+ (inc (- n k)) n)) (rrange+ k))))
-
-(defn parts-by-coll-count
-  "Given N and collection, returns the number of partitions of N by elements of the
-  collection"
-  [n coll]
-  (loop [cur-coll (take-while #(<= % n) coll)
-         res (concat [1] (repeat n 0))]
-    (if (empty? cur-coll)
-      (last res)
-      (recur (rest cur-coll)
-        (let [cur (first cur-coll)]
-          (loop [i cur
-                 cur-res res]
-            (if (> i n)
-              cur-res
-              (recur (inc i) (update-in (vec cur-res) [i]
-                               #(+' % (nth cur-res (- i cur))))))))))))
 
 (defn perm-gen
   "Given N, a sorted collection of digits, returns Nth lexicographical permutation of
