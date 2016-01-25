@@ -45,6 +45,8 @@ Solutions to problems from http://projecteuler.net
     [63](https://projecteuler.net/problem=63),
     [68](https://projecteuler.net/problem=68),
     [71](https://projecteuler.net/problem=71),
+    [73](https://projecteuler.net/problem=73),
+    [74](https://projecteuler.net/problem=74),
     [89](https://projecteuler.net/problem=89),
     [97](https://projecteuler.net/problem=97),
     [99](https://projecteuler.net/problem=99),
@@ -84,6 +86,7 @@ Solutions to problems from http://projecteuler.net
     [65](https://projecteuler.net/problem=65),
     [69](https://projecteuler.net/problem=69),
     [70](https://projecteuler.net/problem=70),
+    [72](https://projecteuler.net/problem=72),
     [243](https://projecteuler.net/problem=243),
     [387](https://projecteuler.net/problem=387)
 * Probability theory
