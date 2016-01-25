@@ -3,7 +3,7 @@
   tools.core)
 
 (declare but-nth get-by-indices max-index min-index n-subseqs range+ rrange rrange+
-  rswitch switch take-drop-while)
+  rswitch switch take-drop-while zero-shift)
 
 (defn but-nth
   "Given collection and N, returns collection with nth element removed"
@@ -71,3 +71,11 @@
   "Given pred, pred2 and coll, returns (take-while pred2 (drop-while pred coll))"
   [pred pred2 coll]
   (take-while pred2 (drop-while pred coll)))
+
+(defn zero-shift
+  "Given N and a collection, returns collection with N zeroes added at the beginning"
+  [n coll]
+  (if (= n 1)
+    (concat [0] coll)
+    (concat (repeat n 0) coll)))
+

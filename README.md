@@ -13,7 +13,9 @@ Solutions to problems from http://projecteuler.net
     [31](https://projecteuler.net/problem=31),
     [67](https://projecteuler.net/problem=67),
     [76](https://projecteuler.net/problem=76),
-    [77](https://projecteuler.net/problem=77)
+    [77](https://projecteuler.net/problem=77),
+    [81](https://projecteuler.net/problem=81),
+    [92](https://projecteuler.net/problem=92)
 * Elementary
   * [1](https://projecteuler.net/problem=1),
     [2](https://projecteuler.net/problem=2),
