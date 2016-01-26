@@ -4,7 +4,7 @@
   (:use tools.math)
   (:use tools.core))
 
-(declare all-part-perms all-perms part-perms-count perm-gen)
+(declare all-part-perms all-perms mix-perms part-perms-count perm-gen)
 
 (defn all-part-perms
   "Given K and a sequence, returns all sequence partial permutations of K elements in
@@ -34,6 +34,17 @@
   [n k]
   (reduce *' (map #(/ %1 %2)
                (reverse (range+ (inc (- n k)) n)) (rrange+ k))))
+
+(defn mix-perms
+  "Given two sequences, returns all distinct sequences, consists of elements of both
+  sequences preserving order of each of given sequences"
+  [c d]
+  (if (empty? c)
+    [d]
+    (if (empty? d)
+      [c]
+      (concat (map #(concat [(first c)] %) (mix-perms (rest c) d))
+        (map #(concat [(first d)] %) (mix-perms c (rest d)))))))
 
 (defn perm-gen
   "Given N, a sorted collection of digits, returns Nth lexicographical permutation of

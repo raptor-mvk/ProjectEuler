@@ -4,7 +4,6 @@
   ^{:author raptor_MVK}
   euler.volume_2.task77
   (:use clojure.test)
-  (:use tools.core)
   (:use tools.factorization)
   (:use tools.dynprog))
 
