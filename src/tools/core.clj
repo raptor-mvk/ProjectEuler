@@ -2,8 +2,8 @@
   ^{:author raptor_MVK}
   tools.core)
 
-(declare but-nth get-by-indices max-index min-index n-subseqs range+ rrange rrange+
-  rswitch switch take-drop-while zero-shift)
+(declare but-nth get-by-indices max-index max-map-key min-index min-map-key n-subseqs
+  range+ rrange rrange+ rswitch switch take-drop-while zero-shift)
 
 (defn but-nth
   "Given collection and N, returns collection with nth element removed"
@@ -21,10 +21,20 @@
   [coll]
   (first (apply max-key last (map-indexed vector coll))))
 
+(defn max-map-key
+  "Given a hash-map, returns key of element with maximal value"
+  [coll]
+  (key (apply max-key val coll)))
+
 (defn min-index
   "Given sequence, returns index of minimal element"
   [coll]
   (first (apply min-key last (map-indexed vector coll))))
+
+(defn min-map-key
+  "Given a hash-map, returns key of element with minimal value"
+  [coll]
+  (key (apply min-key val coll)))
 
 (defn n-subseqs
   "Given sequence and N, returns all subsequences of length N"

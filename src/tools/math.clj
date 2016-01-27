@@ -1,9 +1,10 @@
 (ns
   ^{:author raptor_MVK}
-  tools.math)
+  tools.math
+  (:use tools.core))
 
-(declare cont-frac digits-count fact gcd heptagonal? hexagonal? int-power? int? nat-pow
-  nat-pow-mod  pentagonal? pythagorean-triplet? round-to-fixed sgn solve-sqr-eq sqr
+(declare cont-frac digits-count fact gcd get-pythagorean-triplets heptagonal? hexagonal?
+  int-power? int? nat-pow nat-pow-mod pentagonal? round-to-fixed sgn solve-sqr-eq sqr
   square? triangle?)
 
 (defn cont-frac
@@ -35,6 +36,19 @@
     (= n 0) m
     (< m n) (gcd (rem n m) m)
     :else (gcd (rem m n) n)))
+
+(defn get-pythagorean-triplets
+  "Given N, returns all pythagorean triplets (A, B, C) such, that A + B + C <= N"
+  [n]
+  (let [get-triplet (fn [m n]
+                      (vector (- (sqr m) (sqr n)) (* 2 m n) (+ (sqr m) (sqr n))))
+        mult-triplet (fn [k triplet] (map #(* k %) triplet))
+        get-all-triplets (fn [triplet] (take-while #(<= (reduce + %) n)
+                                         (map #(mult-triplet % triplet) (rrange))))
+        prim-triplets (for [m (range+ 2 (Math/sqrt (quot n 2)))
+                            n (filter #(and (= (gcd m %) 1) (odd? (- m %))) (rrange m))]
+                        (get-triplet m n))]
+    (apply concat (map get-all-triplets prim-triplets))))
 
 (defn heptagonal?
   "Given N, returns true, if N is a heptagonal number, and false otherwise"
@@ -81,11 +95,6 @@
   [n]
   (let [root (Math/sqrt (inc (* 24 n)))]
     (and (int? root) (= 5 (rem (int root) 6)))))
-
-(defn pythagorean-triplet?
-  "Given A, B, C, returns true, if they form a pythagorean triplet, and false otherwise"
-  [a b c]
-  (= (sqr c) (+ (sqr a) (sqr b))))
 
 (defn round-to-fixed
   "Given X and N, returns X rounded to N decimal places"
