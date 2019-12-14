@@ -1,14 +1,2 @@
-pom.xml
-pom.xml.asc
-.idea/workspace.xml
-.idea/uiDesigner.xml
-*jar
-/lib/
-/classes/
-/target/
-/checkouts/
-.lein-deps-sum
-.lein-repl-history
-.lein-plugins/
-.lein-failures
-.nrepl-port
+.idea/*
+
