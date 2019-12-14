@@ -1,5 +1,5 @@
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   tools.factorization
   (:use tools.core)
   (:use tools.math))
@@ -67,7 +67,7 @@
 (defn prime-seq
   "Returns lazy sequence of prime numbers"
   []
-  (let [upd (fn [sieve n prime] (update-in sieve [(+ n prime)] conj prime))
+  (let [upd (fn [sieve n prime] (update sieve (+ n prime) conj prime))
         prime-step (fn ps [sieve prime]
                      (if-let [factors (get sieve prime)]
                        (recur (reduce #(upd %1 prime %2) (dissoc sieve prime) factors)

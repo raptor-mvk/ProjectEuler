@@ -1,7 +1,7 @@
 ; Topic: combinatorics
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task53
   (:use tools.comb)
   (:use tools.core)

@@ -2,7 +2,7 @@
 ; Idea: the answer has at least 6 digits
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task52
   (:use tools.core)
   (:use tools.math)

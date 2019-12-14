@@ -1,7 +1,7 @@
 ; Topic: number theory
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_1.task5
   (:use clojure.test)
   (:use tools.factorization))

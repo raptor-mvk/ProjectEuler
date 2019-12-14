@@ -1,7 +1,7 @@
 ; Topic: number theory
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_1.task14
   (:use clojure.test)
   (:use tools.seqs))
@@ -16,8 +16,8 @@
                                          (inc (*' n 3))
                                          (quot n 2))
                                  new-lens (collatz-len new-n lens)]
-                             (assoc-in new-lens [n] (inc (get-in new-lens [new-n]))))
-                           (assoc-in lens [n] len))))]
+                             (assoc new-lens n (inc (get-in new-lens [new-n]))))
+                           (assoc lens n len))))]
     (loop [ns (range 2 n)
           lens {1 1}]
       (if (empty? ns)

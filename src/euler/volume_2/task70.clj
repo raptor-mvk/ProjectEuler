@@ -3,7 +3,7 @@
 ;       phi(n) = n - 1, where n is prime, so it could not be permutation of n
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task70
   (:use clojure.test)
   (:use tools.core)

@@ -1,7 +1,7 @@
 ; Topic: probability theory
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_5.task205
   (:use clojure.test)
   (:use tools.math)

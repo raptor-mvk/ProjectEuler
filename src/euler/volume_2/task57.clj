@@ -1,12 +1,12 @@
 ; Topic: elementary
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task57
   (:use tools.conversions)
   (:use clojure.test))
 
-(defn longer-numberator-count
+(defn longer-numerator-count
   "Given N, returns number of fractions contain a numerator with more digits than
   denominator in the process of expansion the square root of two as an infinite continued
   fraction to N iterations"
@@ -16,6 +16,6 @@
         denominator-lengths (map #(count (num2seq (denominator %))) expansions)]
     (count (filter true? (map #(> %1 %2) numerator-lengths denominator-lengths)))))
 
-(deftest test1 (is (= (longer-numberator-count 1000) 153)))
+(deftest test1 (is (= (longer-numerator-count 1000) 153)))
 
 (time (run-tests 'euler.volume_2.task57))

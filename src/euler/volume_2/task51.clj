@@ -4,7 +4,7 @@
 ;       would be at least 3 numbers divisible by 3 in sequence
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task51
   (:use clojure.test)
   (:use clojure.set)

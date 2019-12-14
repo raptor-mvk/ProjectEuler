@@ -5,7 +5,7 @@
 ;       the answer is sum (A[i, N] * B[i]; i = 2 .. 9 ^ 2 * N)
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task92
   (:use clojure.test)
   (:use tools.math)

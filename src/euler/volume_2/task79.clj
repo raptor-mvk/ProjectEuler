@@ -1,8 +1,8 @@
 ; Topic: strings
-; Idea: full search on the sorted list of sequnces
+; Idea: full search on the sorted list of sequences
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task79
   (:use clojure.test)
   (:use tools.comb)

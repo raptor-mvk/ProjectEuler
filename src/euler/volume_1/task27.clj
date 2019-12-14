@@ -4,7 +4,7 @@
 ;       a + b + 1
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_1.task27
   (:use clojure.test)
   (:use tools.factorization))

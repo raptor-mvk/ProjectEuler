@@ -2,7 +2,7 @@
 ; Idea: Euclid's formula
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task75
   (:use clojure.test)
   (:use tools.math))

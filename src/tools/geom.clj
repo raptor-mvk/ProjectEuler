@@ -1,5 +1,5 @@
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   tools.geom
   (:use tools.core)
   (:use tools.math))
@@ -23,7 +23,7 @@
 
 (defn length
   "Given vector (A,B), returns its length"
-  [[a b :as v]]
+  [[a b]]
   (Math/sqrt (+ (* a a) (* b b))))
 
 (defn point+dirvect2line

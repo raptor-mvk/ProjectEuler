@@ -1,19 +1,21 @@
-Solutions to problems from http://projecteuler.net
+Problem solutions from http://projecteuler.net written in Clojure
+
+![](https://projecteuler.net/profile/raptor_MVK.png)
 
 # Topics
 
 * Combinatorics
   * [15](https://projecteuler.net/problem=15),
     [24](https://projecteuler.net/problem=24),
+    [31](https://projecteuler.net/problem=31),
     [32](https://projecteuler.net/problem=32),
     [41](https://projecteuler.net/problem=41),
-    [53](https://projecteuler.net/problem=53)
+    [53](https://projecteuler.net/problem=53),
+    [76](https://projecteuler.net/problem=76),
+    [77](https://projecteuler.net/problem=77)
 * Dynamic programming
   * [18](https://projecteuler.net/problem=18),
-    [31](https://projecteuler.net/problem=31),
     [67](https://projecteuler.net/problem=67),
-    [76](https://projecteuler.net/problem=76),
-    [77](https://projecteuler.net/problem=77),
     [81](https://projecteuler.net/problem=81),
     [92](https://projecteuler.net/problem=92)
 * Elementary

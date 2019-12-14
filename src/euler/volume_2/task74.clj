@@ -1,7 +1,7 @@
 ; Topic: elementary
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task74
   (:use clojure.test)
   (:use tools.math)
@@ -15,8 +15,7 @@
                      (if (get-in res [n])
                        [n]
                        (let [next-n (reduce + (map fact (num2seq n)))]
-                         (concat [n] (make-chain next-n res)))))
-        add (fn [m k v] (assoc-in m [k] v))]
+                         (concat [n] (make-chain next-n res)))))]
     (loop [i 3
            res {1 1, 2 1, 169 3, 363601 3, 1454 3, 145 1, 40585 1, 871 2, 45361 2,
                 872 2, 45362 2}]
@@ -26,7 +25,7 @@
               chain-length (dec (+ (get-in res [(last chain)]) (count chain)))
               subchain-lengths (map #(vector %1 (- chain-length %2)) chain (range))]
           (recur (inc i)
-            (reduce #(add %1 (first %2) (last %2)) res subchain-lengths)))))))
+            (reduce #(assoc %1 (first %2) (last %2)) res subchain-lengths)))))))
 
 (deftest test1 (is (= (factorial-chains-count 1000000 60) 402)))
 

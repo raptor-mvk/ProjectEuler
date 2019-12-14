@@ -7,7 +7,7 @@
 ;                              (1 - 1 / 2 ^ (i - 1)) ^ n) * i)
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_7.task323
   (:use tools.math)
   (:use clojure.test))

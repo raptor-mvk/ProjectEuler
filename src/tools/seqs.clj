@@ -1,5 +1,5 @@
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   tools.seqs
   (:use tools.core)
   (:use tools.math)
@@ -15,7 +15,6 @@
     (if (empty? nums)
       (sort (distinct res))
       (let [cur (first nums)
-            tail (rest nums)
             cur-type (perfect? cur)]
         (if (= cur-type :deficient)
           (recur (rest nums) res)

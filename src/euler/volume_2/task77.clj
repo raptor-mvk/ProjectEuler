@@ -1,11 +1,11 @@
-; Topic: dynamic programming
+; Topic: combinatorics
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task77
   (:use clojure.test)
   (:use tools.factorization)
-  (:use tools.dynprog))
+  (:use tools.comb))
 
 (defn min-num-with-prime-sums-count
   "Given N, returns the first number which can be written as the sum of primes in over

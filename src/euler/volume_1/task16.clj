@@ -1,7 +1,7 @@
 ; Topic: elementary
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_1.task16
   (:use clojure.test)
   (:use tools.math)

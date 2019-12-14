@@ -2,7 +2,7 @@
 ; Idea: maximal integer, that can form 9-digit concatenated product with n > 1, is 9999
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_1.task38
   (:use clojure.test)
   (:use tools.core)

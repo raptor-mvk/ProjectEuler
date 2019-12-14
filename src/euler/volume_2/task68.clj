@@ -2,7 +2,7 @@
 ; Idea: full search
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task68
   (:use clojure.set)
   (:use clojure.test)

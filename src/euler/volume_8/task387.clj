@@ -2,9 +2,8 @@
 ; Idea: use probabilistic prime test
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_8.task387
-  (:import [java.math BigInteger])
   (:use tools.conversions)
   (:use tools.factorization)
   (:use tools.core)

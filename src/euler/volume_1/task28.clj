@@ -1,7 +1,7 @@
 ; Topic: grids
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_1.task28
   (:use tools.core)
   (:use clojure.test))

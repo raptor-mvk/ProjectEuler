@@ -1,9 +1,9 @@
 ; Topic: number theory
-; Idea: search through pentagonal numbers for sum S, checking S - X,
-;       S - 2 * X for pentagonality, where X moving from 1 to S / 2
+; Idea: search through pentagonal numbers for sum S, checking whether S - X,
+;       S - 2 * X are pentagonal, where X moving from 1 to S / 2
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_1.task44
   (:use clojure.test)
   (:use tools.core)

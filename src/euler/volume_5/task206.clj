@@ -3,7 +3,7 @@
 ;       and could end with 00, 30 or 70
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_5.task206
   (:use clojure.test)
   (:use tools.math))

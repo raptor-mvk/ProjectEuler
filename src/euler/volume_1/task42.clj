@@ -1,13 +1,13 @@
 ; Topic: strings
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_1.task42
   (:use clojure.test)
   (:use tools.math))
 
 (defn triangle-words-count
-  "Given a sequence of words, returns number of words, which value is triangle nubmer"
+  "Given a sequence of words, returns number of words, which value is triangle number"
   [coll]
   (let [word-value (fn [s] (reduce + (map #(inc (- (int %) (int \A))) s)))]
     (reduce + (map #(if (triangle? (word-value %)) 1 0) coll))))

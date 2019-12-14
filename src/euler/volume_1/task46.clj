@@ -3,7 +3,7 @@
 ;       which produce this sum = prime + 2 * n ^ 2
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_1.task46
   (:use clojure.test)
   (:use tools.core)
@@ -15,7 +15,7 @@
   twice a square"
   []
   (let [upd (fn [sieve prime n]
-              (update-in sieve [(+ prime (* 2 (sqr n)))] conj [prime n]))]
+              (update sieve (+ prime (* 2 (sqr n))) conj [prime n]))]
     (loop [sieve {}
            n 3]
       (if-let [cur (get sieve n)]

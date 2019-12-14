@@ -1,7 +1,7 @@
 ; Topic: strings
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_1.task17
   (:use tools.core)
   (:use clojure.test))
@@ -15,18 +15,18 @@
         and-len 3
         hundred-len 7
         thousand-len 8
-        num2len (fn num2len [n and?]
+        num2len (fn num2len [n]
                   (cond
                     (< n 20) (nth digits-teen-len n)
                     (< n 100) (+ (nth (concat [0] (rest digits-teen-len)) (rem n 10))
                                 (nth tens-len (quot n 10)))
                     (< n 1000) (+ (nth digits-teen-len (quot n 100)) hundred-len and-len
-                                 (num2len (rem n 100) true))
+                                 (num2len (rem n 100)))
                     (< n 1100) (+ (nth digits-teen-len (quot n 1000)) thousand-len and-len
-                                 (num2len (rem n 1000) true))
+                                 (num2len (rem n 1000)))
                     :else (+ (nth digits-teen-len (quot n 1000)) thousand-len
-                            (num2len (rem n 1000) true))))]
-    (reduce + (map #(num2len % false) (rrange+ n)))))
+                            (num2len (rem n 1000)))))]
+    (reduce + (map #(num2len %) (rrange+ n)))))
 
 (deftest test1 (is (= (num-letters-count 5) 19)))
 

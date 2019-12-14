@@ -1,7 +1,7 @@
 ; Topic: strings
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_1.task22
   (:use clojure.test))
 

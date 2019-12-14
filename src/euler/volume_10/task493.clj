@@ -9,7 +9,7 @@
 ;         N(k - 1, total - 1, good - 1, C)
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_10.task493
   (:use tools.math)
   (:use tools.core)

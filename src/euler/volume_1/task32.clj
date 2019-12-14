@@ -3,7 +3,7 @@
 ;       2-digit * 3-digit = 4-digit
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_1.task32
   (:use clojure.test)
   (:use tools.comb)

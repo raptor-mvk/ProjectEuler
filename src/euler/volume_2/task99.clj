@@ -2,7 +2,7 @@
 ; Idea: compare log10 of numbers instead of numbers themselves
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task99
   (:use clojure.test)
   (:use tools.core))

@@ -2,7 +2,7 @@
 ; Idea: n / phi(n) is maximal for the number with most distinct prime factors
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task69
   (:use clojure.test)
   (:use tools.factorization))

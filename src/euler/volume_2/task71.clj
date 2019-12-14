@@ -3,7 +3,7 @@
 ;       (except denominator of r)
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task71
   (:use clojure.test)
   (:use tools.core)

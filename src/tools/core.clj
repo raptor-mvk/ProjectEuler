@@ -1,5 +1,5 @@
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   tools.core)
 
 (declare but-nth get-by-indices max-index max-map-key min-index min-map-key n-subseqs

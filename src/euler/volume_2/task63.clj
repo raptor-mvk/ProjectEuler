@@ -2,7 +2,7 @@
 ; Idea: n-digit integer could be n-th power of one-digit number only
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task63
   (:use clojure.test)
   (:use tools.math)

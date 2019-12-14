@@ -2,7 +2,7 @@
 ; Idea: parallel decoding, checking, that result is plain English text
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task59
   (:use tools.core)
   (:use clojure.test))
@@ -12,8 +12,7 @@
   returns sum of the ASCII values in the original text based on knowledge that the plain
   text must contain common English words"
   [coll]
-  (let [n (count coll)
-        chars (set (concat (map int [\space \, \. \! \? \- \" \' \( \) \: \;])
+  (let [chars (set (concat (map int [\space \, \. \! \? \- \" \' \( \) \: \;])
                      (range+ (int \a) (int \z)) (range+ (int \A) (int \Z))
                      (range+ (int \0) (int \9))))
         key-char (fn [coll] (loop [cur coll

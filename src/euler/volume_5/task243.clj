@@ -2,7 +2,7 @@
 ; Idea: Euler's totient function
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_5.task243
   (:use clojure.test)
   (:use tools.factorization))

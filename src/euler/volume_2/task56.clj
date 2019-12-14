@@ -1,7 +1,7 @@
 ; Topic: elementary
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task56
   (:use tools.core)
   (:use tools.math)
@@ -9,7 +9,7 @@
   (:use clojure.test))
 
 (defn max-power-digit-sum
-  "Given N, K, returns maximal digtal sum of a^b, where a < N, b < K"
+  "Given N, K, returns maximal digital sum of a^b, where a < N, b < K"
   [n k]
   (let [powers (fn [n] (map #(nat-pow n %) (rrange k)))
         nums (map powers (range 2 n))]

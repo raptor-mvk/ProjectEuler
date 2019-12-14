@@ -1,5 +1,5 @@
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   tools.date)
 
 (declare days-in-month leap-year?)

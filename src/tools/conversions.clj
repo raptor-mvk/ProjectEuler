@@ -1,5 +1,5 @@
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   tools.conversions)
 
 (declare is-palindrome? num2rom num2seq numstr2seq rom2num seq2num)

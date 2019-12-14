@@ -2,7 +2,7 @@
 ; Idea: cycle is formed from remnants by modulo d
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_1.task26
   (:use clojure.test)
   (:use tools.core))

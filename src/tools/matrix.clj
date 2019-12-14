@@ -1,12 +1,12 @@
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   tools.matrix
   (:use tools.core))
 
 (declare diagonalize get-column get-diag get-ldiag transpose)
 
 (defn diagonalize
-  "Given matrix, retunrs a sequence of all its diagonal vectors"
+  "Given matrix, returns a sequence of all its diagonal vectors"
   [m]
   (let [n (count m)
         k (count (first m))
@@ -16,7 +16,7 @@
       (map #(get-ldiag m n (first %) (last %)) (concat horiz-pts (vert-pts (dec n)))))))
 
 (defn get-column
-  "Given matrix and i, retuns i-th column"
+  "Given matrix and i, returns i-th column"
   [m i]
   (map #(nth % i) m))
 

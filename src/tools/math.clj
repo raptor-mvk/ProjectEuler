@@ -1,11 +1,11 @@
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   tools.math
   (:use tools.core))
 
-(declare cont-frac digits-count fact gcd get-pythagorean-triplets heptagonal? hexagonal?
-  int-power? int? nat-pow nat-pow-mod pentagonal? round-to-fixed sgn solve-sqr-eq sqr
-  square? triangle?)
+(declare cont-frac digits-count fact gcd generalized-pentagonal-seq
+         get-pythagorean-triplets heptagonal? hexagonal? int-power? is-int? nat-pow nat-pow-mod
+         pentagonal? round-to-fixed sgn solve-sqr-eq sqr square? triangle?)
 
 (defn cont-frac
   "Given N and a representation of the infinite continued fraction, returns Nth partial
@@ -17,11 +17,11 @@
   "Given natural N, returns number of its digits in decimal number system;
   given natural N and K, returns number of digits in N in K-ary number system"
   ([n]
-    (digits-count n 10))
+   (digits-count n 10))
   ([n k]
-    (if (= n 0)
-      0
-      (inc (digits-count (quot n k))))))
+   (if (= n 0)
+     0
+     (inc (digits-count (quot n k))))))
 
 (defn fact
   "Given N, returns N!"
@@ -37,6 +37,11 @@
     (< m n) (gcd (rem n m) m)
     :else (gcd (rem m n) n)))
 
+(defn generalized-pentagonal-seq
+  "Returns lazy sequence of generalized pentagonal numbers"
+  []
+  (map #(quot (* % (dec (* % 3))) 2) (interleave (map #(- %) (range)) (rrange))))
+
 (defn get-pythagorean-triplets
   "Given N, returns all pythagorean triplets (A, B, C) such, that A + B + C <= N"
   [n]
@@ -44,7 +49,7 @@
                       (vector (- (sqr m) (sqr n)) (* 2 m n) (+ (sqr m) (sqr n))))
         mult-triplet (fn [k triplet] (map #(* k %) triplet))
         get-all-triplets (fn [triplet] (take-while #(<= (reduce + %) n)
-                                         (map #(mult-triplet % triplet) (rrange))))
+                                                   (map #(mult-triplet % triplet) (rrange))))
         prim-triplets (for [m (range+ 2 (Math/sqrt (quot n 2)))
                             n (filter #(and (= (gcd m %) 1) (odd? (- m %))) (rrange m))]
                         (get-triplet m n))]
@@ -54,13 +59,13 @@
   "Given N, returns true, if N is a heptagonal number, and false otherwise"
   [n]
   (let [root (Math/sqrt (+ (* 40 n) 9))]
-    (and (int? root) (= 7 (rem (int root) 10)))))
+    (and (is-int? root) (= 7 (rem (int root) 10)))))
 
 (defn hexagonal?
   "Given N, returns true, if N is a hexagonal number, and false otherwise"
   [n]
   (let [root (Math/sqrt (inc (* 8 n)))]
-    (and (int? root) (= 3 (rem (int root) 4)))))
+    (and (is-int? root) (= 3 (rem (int root) 4)))))
 
 (defn int-power?
   "Given N, returns true, if N is a power of an integer, and false otherwise"
@@ -69,13 +74,13 @@
     false
     (loop [i 2]
       (let [res (Math/pow n (/ 1.0 i))]
-        (if (int? res)
+        (if (is-int? res)
           true
           (if (< res 2.0)
             false
             (recur (inc i))))))))
 
-(defn int?
+(defn is-int?
   "Given float X, returns true, if X is integer, and false otherwise"
   [x]
   (= 0.0 (rem x 1)))
@@ -94,7 +99,7 @@
   "Given N, returns true, if N is a pentagonal number, and false otherwise"
   [n]
   (let [root (Math/sqrt (inc (* 24 n)))]
-    (and (int? root) (= 5 (rem (int root) 6)))))
+    (and (is-int? root) (= 5 (rem (int root) 6)))))
 
 (defn round-to-fixed
   "Given X and N, returns X rounded to N decimal places"
@@ -130,9 +135,9 @@
 (defn square?
   "Given N, returns true, if N is a perfect square, and false otherwise"
   [n]
-  (int? (Math/sqrt n)))
+  (is-int? (Math/sqrt n)))
 
 (defn triangle?
   "Given N, returns true, if N is a triangle number, and false otherwise"
   [n]
-  (int? (Math/sqrt (inc (* 8 n)))))
+  (is-int? (Math/sqrt (inc (* 8 n)))))

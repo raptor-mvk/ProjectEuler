@@ -3,7 +3,7 @@
 ;       using depth-first search
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task61
   (:use clojure.test)
   (:use tools.core)

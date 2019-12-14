@@ -1,11 +1,11 @@
-; Topic: dynamic programming
+; Topic: combinatorics
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task76
   (:use clojure.test)
   (:use tools.core)
-  (:use tools.dynprog))
+  (:use tools.comb))
 
 (defn dif-sums-count
   "Given N, returns number of different ways to represent N as sum of at least two

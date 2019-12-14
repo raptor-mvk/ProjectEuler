@@ -1,10 +1,10 @@
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   tools.comb
   (:use tools.math)
   (:use tools.core))
 
-(declare all-part-perms all-perms mix-perms part-perms-count perm-gen)
+(declare all-part-perms all-perms mix-perms part-perms-count perm-gen sums-count)
 
 (defn all-part-perms
   "Given K and a sequence, returns all sequence partial permutations of K elements in
@@ -57,3 +57,18 @@
       (concat [(nth coll digit)]
         (perm-gen (rem n tail-perm-count)
           (concat (take digit coll) (drop (inc digit) coll)))))))
+
+(defn sums-count
+  "Given N and collection, returns the number of ways to divide every N into piles with
+  the sizes from the collection"
+  [n coll]
+  (let [upd (fn [res i shift]
+              (update res i #(+' (if (nil? %) 0 %) (get res (- i shift) 0))))]
+    (loop [cur-coll (take-while #(<= % n) coll)
+           res (hash-map 0 1)]
+      (if (empty? cur-coll)
+        (get res n)
+        (recur (rest cur-coll)
+          (let [cur (first cur-coll)]
+            (concat (take cur res) ())
+            (reduce #(upd %1 %2 cur) res (range+ cur n))))))))

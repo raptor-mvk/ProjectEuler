@@ -3,7 +3,7 @@
 ;       while prime * length of the current longest sequence < N
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_1.task50
   (:use clojure.test)
   (:use tools.core)

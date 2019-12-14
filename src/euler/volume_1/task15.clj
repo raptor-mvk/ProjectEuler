@@ -2,7 +2,7 @@
 ; Idea: answer is number of partial permutations of n down moves from 2 * n moves
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_1.task15
   (:use clojure.test)
   (:use tools.comb))

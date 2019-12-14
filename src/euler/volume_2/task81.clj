@@ -3,7 +3,7 @@
 ;       then A[i, j] = min (A[i + 1, j]; A[i, j + 1]) + M[i, j], where M - input matrix
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task81
   (:use clojure.test)
   (:use tools.math)

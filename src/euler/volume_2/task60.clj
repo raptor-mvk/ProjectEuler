@@ -3,7 +3,7 @@
 ;       reached
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task60
   (:use clojure.set)
   (:use tools.factorization)
@@ -39,8 +39,8 @@
                                                  (concat primes [new-prime]) (dec n))]
                                  answer
                                  (recur (rest cur-set)))))))))
-        upd (fn [sets n prime] (update-in sets [prime] conj n))
-        add (fn [sets n] (assoc-in sets [n] #{}))
+        upd (fn [sets n prime] (update sets prime conj n))
+        add (fn [sets n] (assoc sets n #{}))
         sum-answer (fn [coll] (reduce #(+ %1 (first %2)) 0 coll))]
     (loop [cur-limit 10
            cur-primes (drop 3 (make-cur-primes 1 (prime-seq)))

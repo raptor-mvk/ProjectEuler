@@ -2,7 +2,7 @@
 ; Idea: backward propagation
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_1.task18
   (:use clojure.test))
 

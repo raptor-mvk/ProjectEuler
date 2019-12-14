@@ -1,7 +1,7 @@
 ; Topic: grids
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task58
   (:use tools.math)
   (:use tools.factorization)

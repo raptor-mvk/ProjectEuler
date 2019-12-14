@@ -1,7 +1,7 @@
 ; Topic: geometry
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_3.task102
   (:use clojure.test)
   (:use tools.geom))

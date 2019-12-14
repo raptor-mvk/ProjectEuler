@@ -2,7 +2,7 @@
 ; Idea: For obtaining 1000000-th digit, it is enough to take 185200 integers
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_1.task40
   (:use clojure.test)
   (:use tools.core))

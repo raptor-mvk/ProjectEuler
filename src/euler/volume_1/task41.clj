@@ -3,7 +3,7 @@
 ;       it is divisible by 3
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_1.task41
   (:use clojure.test)
   (:use tools.comb)

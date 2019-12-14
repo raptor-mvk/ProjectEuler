@@ -1,7 +1,7 @@
 ; Topic: geometry
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_3.task144
   (:use clojure.test)
   (:use tools.geom)
@@ -18,10 +18,10 @@
                          [a b c :as next-line] (points2line hit next-point)
                          next-hit-xs (solve-sqr-eq [(+ (* a a) (* 4.0 b b)) (* 2.0 a c)
                                                     (- (* c c) (* 100.0 b b))])
-                         next-hit-x (first (filter #(> (Math/abs (- % x)) 1e-8)
+                         next-hit-x (first (filter #(> (Math/abs ^double (- % x)) 1e-8)
                                              next-hit-xs))
                          next-hit-y (Math/sqrt (- 100.0 (* 4.0 (sqr next-hit-x))))]
-                     (if (< (Math/abs (distance [next-hit-x next-hit-y] next-line)) 1e-8)
+                     (if (< (Math/abs ^double (distance [next-hit-x next-hit-y] next-line)) 1e-8)
                        [next-hit-x next-hit-y]
                        [next-hit-x (- next-hit-y)])))]
     (loop [begin start

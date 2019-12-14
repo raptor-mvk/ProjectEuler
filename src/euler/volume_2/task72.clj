@@ -2,7 +2,7 @@
 ; Idea: the answer is sum of phi(n)
 
 (ns
-  ^{:author raptor_MVK}
+  ^{:author "raptor_MVK"}
   euler.volume_2.task72
   (:use clojure.test)
   (:use tools.factorization)
@@ -12,10 +12,9 @@
   "Given N, returns the number of reduced proper fractions, for which denominator <= N"
   [n]
   (let [primes (take-while #(<= % n) (prime-seq))
-        add (fn [m k v] (assoc-in m [k] v))
-        upd (fn [m k v] (update-in m [k] * v))
+        upd (fn [m k v] (update m k * v))
         prime-factors (loop [coll primes
-                             res (reduce #(add %1 %2 %2) {} (range+ 2 n))]
+                             res (reduce #(assoc %1 %2 %2) {} (range+ 2 n))]
                         (if (empty? coll)
                           res
                           (let [cur (first coll)
